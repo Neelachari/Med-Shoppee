@@ -1,11 +1,16 @@
-import './App.css';
+import "./App.css";
+import { AllRoutes } from "./Routes/AllRoutes";
+import { Navbar } from "./Routes/Navbar";
+import { ChakraProvider } from '@chakra-ui/react'
 
-function App() {
+export default function App() {
   return (
+    
+    <ChakraProvider>
     <div className="App">
-      
+      <Navbar/>
+      <AllRoutes/>
     </div>
+    </ChakraProvider>
   );
 }
-
-export default App;

@@ -1,7 +1,77 @@
 {
-    "user":[{
-        "id":1,
-                
-    "image":"https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/m679ee9wemhxx03whuay.jpg"
-    }]
+    "user":[
+        {
+            "id": "1",
+            "image": "https://example.com/image1.jpg",
+            "name": "Aspirin",
+            "price": 5.99,
+            "description": "Aspirin is a common pain reliever and fever reducer."
+          },
+          {
+            "id": "2",
+            "image": "https://example.com/image2.jpg",
+            "name": "Ibuprofen",
+            "price": 7.99,
+            "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and reduce fever."
+          },
+          {
+            "id": "3",
+            "image": "https://example.com/image3.jpg",
+            "name": "Acetaminophen",
+            "price": 6.99,
+            "description": "Acetaminophen is a pain reliever and fever reducer that is available over-the-counter."
+          },
+          {
+            "id": "4",
+            "image": "https://example.com/image4.jpg",
+            "name": "Naproxen",
+            "price": 8.99,
+            "description": "Naproxen is an NSAID used to relieve pain, reduce fever, and reduce inflammation."
+          },
+          {
+            "id": "5",
+            "image": "https://example.com/image5.jpg",
+            "name": "Loratadine",
+            "price": 9.99,
+            "description": "Loratadine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes."
+          },
+          {
+            "id": "6",
+            "image": "https://example.com/image6.jpg",
+            "name": "Diphenhydramine",
+            "price": 7.99,
+            "description": "Diphenhydramine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes, as well as to treat motion sickness and insomnia."
+          },
+          {
+            "id": "7",
+            "image": "https://example.com/image7.jpg",
+            "name": "Pseudoephedrine",
+            "price": 10.99,
+            "description": "Pseudoephedrine is a decongestant used to relieve nasal congestion caused by allergies, colds, or the flu."
+          },
+          {
+            "id": "8",
+            "image": "https://example.com/image8.jpg",
+            "name": "Dextromethorphan",
+            "price": 6.99,
+            "description": "Dextromethorphan is a cough suppressant used to relieve coughing caused by colds or the flu."
+          },
+          {
+            "id": "9",
+            "image": "https://example.com/image9.jpg",
+            "name": "Guaifenesin",
+            "price": 7.99,
+            "description": "Guaifenesin is an expectorant used to relieve chest congestion caused by colds or the flu."
+          },
+          {
+            "id": "10",
+            "image": "https://example.com/image10.jpg",
+            "name": "Salicylic acid",
+            "price": 8.99,
+            "description": "Salicylic acid is a common ingredient in acne treatments and is used to unclog pores and exfol"
+          }
+
+
+
+    ]
 }
