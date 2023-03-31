@@ -1,0 +1,11 @@
+h2{
+    padding: 2%;
+    font-size: x-large;
+    font-weight: 700;
+    color: gray;
+    background-color: aliceblue;
+}
+#poster{
+    width: 90%;
+    margin: auto;
+}

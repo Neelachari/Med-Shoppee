@@ -1,7 +1,7 @@
 import React, {useState,useContext} from 'react'
 import { AuthContext } from '../Context/AuthContextProvider'
 import {Link} from "react-router-dom"
-import { Box, Button, FormControl, FormLabel, Heading, Input, Stack } from '@chakra-ui/react';
+import { Box, Button, FormControl, FormLabel, Heading, Input, Text } from '@chakra-ui/react';
 import { SignUp } from './SignUp';
 
 
@@ -65,32 +65,35 @@ export default function Login() {
         //     </form>  
                           
         // </div>
-        <Box bg="gray.50" minH="100vh" py="12" px={{ base: '4', lg: '8' }}>
-        <Box maxW="md" mx="auto" textAlign="center">
-          <Heading size="xl" fontWeight="extrabold">
-            Sign in to your account
-          </Heading>
-        </Box>
-        <Box maxW="md" mx="auto" mt="8" bg="white" shadow="base" rounded="md" overflow="hidden">
-          <Box p="6">
-            <Stack spacing="6">
-              <FormControl id="email">
-                <FormLabel>Email address</FormLabel>
-                <Input type="email" autoComplete="email" required />
-              </FormControl>
-              <FormControl id="password">
-                <FormLabel>Password</FormLabel>
-                <Input type="password" autoComplete="current-password" required />
-              </FormControl>
-              <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
-                Sign in
-              </Button>
-            </Stack>
-           <p>Do't Have Account<Link key={"/SignUp"} to={"/SignUp"} >Check</Link></p>
-          </Box>
-          
-        </Box>
+        <Box
+      bgGradient="linear(to-r, purple.500, pink.500)"
+      h="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Box
+        bg="white"
+        w={{ base: "80%", md: "60%", lg: "50%" }}
+        p="8"
+        boxShadow="md"
+        borderRadius="md"
+      >
+        <Text fontSize="3xl" fontWeight="bold" mb="8" textAlign="center">Log In</Text>
+        <FormControl id="email" mb="4">
+          <FormLabel>Email address</FormLabel>
+          <Input type="email" />
+        </FormControl>
+        <FormControl id="password" mb="8">
+          <FormLabel>Password</FormLabel>
+          <Input type="password" />
+        </FormControl>
+        <Button colorScheme="orange" mb="4" w="100%">Log In</Button>
+        <Button colorScheme="gray"  onClick={() => window.history.back()}>Back</Button>
+        <Text fontSize="sm" textAlign="center">Don't have an account? <a href="#"><Link key={"/SignUp"} to={"/SignUp"} >Sign up Here</Link></a></Text>
         
+       
       </Box>
+    </Box>
     )
 }
