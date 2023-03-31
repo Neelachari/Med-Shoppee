@@ -1,0 +1,54 @@
+.flex{
+    display: flex;
+}
+.flex h5{
+    color: red;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.flex {
+    display: flex;
+    width: 100%;
+  }
+  
+  .main_container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .catsDetails {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .cost {
+    font-weight: bold;
+  }
+  
+  /* Media queries */
+  @media only screen and (max-width: 768px) {
+    .flex {
+      flex-wrap: wrap;
+    }
+  
+    .catsDetails {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .main_container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .main_container {
+      grid-template-columns: 1fr;
+    }
+  }

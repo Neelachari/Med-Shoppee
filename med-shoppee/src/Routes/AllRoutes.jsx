@@ -9,6 +9,8 @@ import Products from '../Pages/Products'
 import SearchBar from '../Pages/Searchbar'
 import { SignUp } from '../Pages/SignUp'
 import { PrivateRoute } from './PrivateRoute'
+import { Admin } from '../Pages/Admin'
+import Footer from '../Pages/Footer'
 
 
 
@@ -19,16 +21,13 @@ const AllRoutes = () => {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/contact" element={<Contact/>}></Route>
-        <Route path="/products" element={
-            <PrivateRoute>
-                <Products/>
-            </PrivateRoute> 
-        }></Route>
-        <Route path="/products/:id" element={<Products/>}></Route>
+        <Route path="/products" element={<Products/>}></Route>
+        <Route path="/products/:id" element={<PrivateRoute><Products/></PrivateRoute>}></Route>
         <Route path="/SignUp" element={<SignUp/>}></Route>
         <Route path="/SearchBar" element={<SearchBar/>}></Route> 
         <Route path="/LocationSearch" element={<LocationSearch/>}></Route>
-        
+        <Route path="/Admin" element={<Admin/>}></Route>
+        <Route path="/Footer" element={<Footer/>}></Route>
     </Routes>
     
     )
