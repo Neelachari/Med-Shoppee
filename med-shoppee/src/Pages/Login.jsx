@@ -1,172 +1,105 @@
-import React, {useState,useContext} from 'react'
-import { AuthContext } from '../Context/AuthContextProvider'
-import {Link} from "react-router-dom"
-import { Box, Button, FormControl, FormLabel, Heading, Input, Text } from '@chakra-ui/react';
-import { SignUp } from './SignUp';
+import { useState } from 'react';
+import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link, Navigate } from 'react-router-dom'
+
+const Login = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+const [islog,setislog]=useState(false)
 
 
-export default function Login() {
-    // const {login,isAuth}=useContext(AuthContext)
-    // const [email,setemail]=useState("")
-    // const [password,setpassword]=useState("")
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch('http://localhost:8080/users', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((res)=>res.json())
 
-    // const handleLogin=(e)=>{
-    //     e.preventDefault()
-    //     const userData={
-    //         email,
-    //         password
-    //     }
-    //     fetch("https://reqres.in/api/login",{
-    //         method: "POST",
-    //         body:JSON.stringify(userData),
-    //         headers:{
-    //             "Content-Type": "application/json"
-    //         },
-    //     }).then((res)=>res.json())
-    //     .then((json)=>{
-    //         console.log(json)
-    //         login(json.token)
-    //     })
-    //     .catch((err)=>console.log(err))
-        
-    // }
-    // if(isAuth){
-    //     return <Navigate to="/home" />
-    // } 
-    return (
-        // <div>
-        //     <form className = "auth_form"  >
-        //         <input
-        //             style = {{padding:"5px", margin: "10px", width: 200}}
-        //             type = "email"
-        //             className = "email"
-        //             placeholder = "Enter Email"
-        //             value={email}
-        //             onChange={(e)=> {
-        //                 setemail(e.target.value)
-        //                 console.log(e.target.value)
-        //             }}
-        //         />
-        //         <br />
-        //         <input
-        //             style = {{padding:"5px", margin: "10px", width: 200}}
-        //             type = "password"
-        //             className = "password"
-        //             placeholder = "Enter password"
-        //             value={password}
-        //             onChange={(e)=> {
-        //                 setpassword(e.target.value)
-        //                 console.log(e.target.value)
-        //             }}
-        //         />
-        //         <br />
-        //         <input className = "submit" type = "submit" onClick={handleLogin}/>
+      .then((data)=>{
+        data.filter((e)=>{
+          if(formData.email===""&&formData.password===""){
+            toast.error("❌ Please Enter The Credentials")
+           
+          }
+          else if(formData.email!=e.email&&formData.password!=e.password){
+            toast.error("❌ Please Check the Email or password")
 
-        //     </form>  
-                          
-        // </div>
-        <Box border="1px solid gray"
+          }
+          else if( e.email===formData.email&&e.password===formData.password){
+            //window.location.href = '/';
+            setislog(true)
+
+            toast.success('✅ Login Successful')
+             
+          }
+
+        })
+      })
+    } catch (error) {
+      console.error(error);
+      // show error message
+    }
+  };
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+if(islog){
+  return <Navigate to="/" />
+  
+}
+  return (
+    <Box
+      padding="3%"
       // bgGradient="linear(to-r, purple.500, pink.500)"
       h="100vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
     >
-      <Box border="1px solid gray"
+      <Box
+        border="1px solid gray"
         bg="white"
         w={{ base: "80%", md: "60%", lg: "50%" }}
         p="8"
         boxShadow="md"
         borderRadius="md"
       >
-        <Text fontSize="3xl" fontWeight="bold" mb="8" textAlign="center">Log In</Text>
-        <FormControl id="email" mb="4">
-          <FormLabel>Email address</FormLabel>
-          <Input type="email" placeholder='Enter Email ID'/>
-        </FormControl>
-        <FormControl id="password" mb="8">
-          <FormLabel>Password</FormLabel>
-          <Input type="password" placeholder='Enter Password'/>
-        </FormControl>
-        <Button colorScheme="orange" mb="4" w="100%">Log In</Button>
-        <Button colorScheme="gray"  onClick={() => window.history.back()}>Back</Button>
-        <Text fontSize="sm" textAlign="center">Don't have an account? <a href="#"><Link key={"/SignUp"} to={"/SignUp"} >Sign up Here</Link></a></Text>
-        
-       
+        <Text fontSize="3xl" fontWeight="bold" mb="8" textAlign="center">
+          Login to your account
+        </Text>
+        <form onSubmit={handleSubmit}>
+        <ToastContainer fontSize="10px"/>
+          <FormControl id="email" mb="4">
+            <FormLabel>Email address</FormLabel>
+            <Input type="email" placeholder="Enter Email ID" name="email" value={formData.email} onChange={handleInputChange} />
+          </FormControl>
+          <FormControl id="password" mb="8">
+            <FormLabel>Password</FormLabel>
+            <Input type="password" placeholder="Enter Password" name="password" value={formData.password} onChange={handleInputChange} />
+          </FormControl>
+          <Button colorScheme="orange" mb="4" w="100%" type="submit">
+            Login
+          </Button>
+        </form>
+        <Text fontSize="sm" textAlign="center">
+          Don't have an account yet? <a href="/signup">Sign up</a>.
+        </Text>
       </Box>
     </Box>
-    )
-}
+  );
+};
 
-// import {
-//   Flex,
-//   Box,
-//   FormControl,
-//   FormLabel,
-//   Input,
-//   Checkbox,
-//   Stack,
-//   Link,
-//   Button,
-//   Heading,
-//   Text,
-//   useColorModeValue,
-// } from '@chakra-ui/react';
+export default Login
 
-// import { SignUp } from './SignUp';
-// //import {Link} from "react-router-dom"
-
-
-// export default function SimpleCard() {
-//   return (
-//     <Flex
-//       minH={'100vh'}
-//       align={'center'}
-//       justify={'center'}
-//       bg={useColorModeValue('gray.50', 'gray.800')}>
-//       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-//         <Stack align={'center'}>
-//           <Heading fontSize={'4xl'}>Sign in to your account</Heading>
-//           <Text fontSize={'lg'} color={'gray.600'}>
-//             to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
-//           </Text>
-//         </Stack>
-//         <Box
-//           rounded={'lg'}
-//           bg={useColorModeValue('white', 'gray.700')}
-//           boxShadow={'lg'}
-//           p={8}>
-//           <Stack spacing={4}>
-//             <FormControl id="email">
-//               <FormLabel>Email address</FormLabel>
-//               <Input type="email" />
-//             </FormControl>
-//             <FormControl id="password">
-//               <FormLabel>Password</FormLabel>
-//               <Input type="password" />
-//             </FormControl>
-//             <Stack spacing={10}>
-//               <Stack
-//                 direction={{ base: 'column', sm: 'row' }}
-//                 align={'start'}
-//                 justify={'space-between'}>
-//                 <Checkbox>Remember me</Checkbox>
-//                 <Link color={'blue.400'}>Forgot password?</Link>
-//               </Stack>
-//               <Button
-//                 bg={'blue.400'}
-//                 color={'white'}
-//                 _hover={{
-//                   bg: 'blue.500',
-//                 }}>
-//                 Sign in
-//               </Button>
-//             </Stack>
-//           </Stack>
-//         </Box>
-//         <Button colorScheme="gray"  onClick={() => window.history.back()}>Back</Button>
-//         <Text fontSize="sm" textAlign="center">Don't have an account? <a href="#"><Link key={"/SignUp"} to={"/SignUp"} >Sign up Here</Link></a></Text>
-//       </Stack>
-//     </Flex>
-//   );
-// }

@@ -2,6 +2,9 @@ import React from 'react'
 import SimpleSlider from './SlickCarsol'
 import SearchBar from "./Searchbar"
 import Slick1 from "./slick1"
+import Slick2 from "./slick2"
+import Slick3 from "./slick3"
+import Slick4 from "./slick4"
 import home from "./home.css"
 import Footer from './Footer'
 import { Spacer } from '@chakra-ui/react'
@@ -13,7 +16,9 @@ export default function Home() {
       <SearchBar/>
       <SimpleSlider/>
       <Slick1/>
-      <Spacer/>
+      <Slick2/>
+      <Slick3/>
+      <Slick4/>
       <Footer/>
     </div>
   )
