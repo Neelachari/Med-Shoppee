@@ -10,13 +10,13 @@ function Navbar() {
     const links=[
        
         {path: "/", title:"MEDICINES" },
+        {path: "/products", title:"Products" },
         {path: "/about", title:"LAB TESTS" },
         {path: "/contact", title:"CONSULT" },
         {path: "/contact", title:"DOCTORS" },
         {path: "/contact", title:"COVID-19" },
         {path: "/contact", title:"AYURVEDA" },
         {path: "/contact", title:"CARE PLAN" },
-        {path: "/products", title:"Products" },
         {path: "/login", title:"Login" }    
     ]
 
@@ -25,7 +25,7 @@ function Navbar() {
        
         
      
-        <div className = "navbar" style={{display:"flex", width:"80%", margin:"auto", justifyContent:"space-between", textDecoration:"none", marginTop:"10px",  }} ><img src={Logo} alt="Icon" width="100px" />
+        <div className = "navbar" style={{display:"flex", width:"80%", margin:"auto", justifyContent:"space-between", textDecoration:"none", marginTop:"10px",  }} ><a href="/"><img src={Logo} alt="Icon" width="100px" /></a>
             {links.map((e)=>{
                 return  (
                     <>
