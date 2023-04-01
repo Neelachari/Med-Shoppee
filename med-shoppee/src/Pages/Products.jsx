@@ -123,7 +123,7 @@ const [dataLimit, setDataLimit] = useState(9);
         </Box>
         
 ))}
-<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber -1)} disabled={pageNumber<1}>Pev</Button>
+<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber -1)} disabled={pageNumber<=1}>Pev</Button>
 <Text fontSize="15px" border="3px solid gray" padding="1%" color="green" >PAGE  {pageNumber}</Text>
 <Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber +1)} disabled={pageNumber==3}>Next</Button>
       </SimpleGrid>

@@ -277,10 +277,48 @@
       "category": "Ear Care"
     }
   ],
-  "Users":[
-
+  "users": [
+    {
+      "name": "Masai30",
+      "email": "masai@masai.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 1
+    },
+    {
+      "name": "Neelesh",
+      "email": "Neeleshnh@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 2
+    },
+    {
+      "email": "Neeleshnh@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "email": "Neeleshnh@gmail.com",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "email": "Neeleshnh@gmail.com",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "email": "Neeleshnh@gmail.com",
+      "password": "12",
+      "id": 6
+    },
+    {
+      "name": "Sajak",
+      "email": "Sajak@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 7
+    }
   ],
-  "OderedItem":[
-    
-  ]
+  "OderedItem": []
 }

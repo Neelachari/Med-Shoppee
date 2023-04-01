@@ -37,7 +37,7 @@ const SearchBar = () => {
 
   return (
     < >
-    <Box as="form" onSubmit={handleSubmit} width="60%" margin="auto">
+    <Box as="form" onSubmit={handleSubmit} width="60%" margin="auto" marginTop={10}>
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"
