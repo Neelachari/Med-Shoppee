@@ -8,6 +8,7 @@ const initialState={
   image:"",
   name:"",
   price:"",
+  data:[],
   description:"",
   category:"",
   

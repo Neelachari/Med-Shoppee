@@ -9,6 +9,7 @@
 .flex {
     display: flex;
     width: 100%;
+    margin-top: 40px;
   }
   
   .main_container {

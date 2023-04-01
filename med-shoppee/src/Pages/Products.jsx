@@ -29,16 +29,6 @@ const reducer = (state,action) => {
         error: action.payload,
         isLoading: false,
       };
-  //     case "CHANGE_PAGE":
-  // return {
-  //   ...state,
-  //   pageNumber: action.payload,
-  // };
-  // case "CHANGE_DATA_LIMIT":
-  //  return {
-  //   ...state,
-  //   dataLimit: action.payload,
-  // };
     default:
       return state;
   }
@@ -87,8 +77,7 @@ const [dataLimit, setDataLimit] = useState(9);
       <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
       <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
 
-      {" "}
-      {" "}
+     <br></br>
 
       <h5>FILTERS</h5>
       <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>

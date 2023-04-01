@@ -5,5 +5,14 @@
 .navbar {
     font-weight: 500;
     font-size: medium;
- 
+    /* position: fixed; */
+    width: 100vw;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 2;
+    padding: 1%;
+    margin-bottom: 100px;
+   
 }

@@ -2,7 +2,8 @@ import React from "react"
 import {Link} from "react-router-dom"
 import Logo from "../Images/Project-icon.png"
 import navbar from "./Navbar.css"
-
+import { Box } from "@chakra-ui/react"
+import {BsCartPlus} from "react-icons/bs"
 
 
 function Navbar() {
@@ -17,7 +18,9 @@ function Navbar() {
         {path: "/contact", title:"COVID-19" },
         {path: "/contact", title:"AYURVEDA" },
         {path: "/contact", title:"CARE PLAN" },
-        {path: "/login", title:"Login" }    
+        {path: "/login", title:"Login" },
+        {path: "/BsCartPlus", title:<BsCartPlus size="20px"/> },
+
     ]
 
     return(
@@ -25,20 +28,25 @@ function Navbar() {
        
         
      
-        <div className = "navbar" style={{display:"flex", width:"80%", margin:"auto", justifyContent:"space-between", textDecoration:"none", marginTop:"10px",  }} ><a href="/"><img src={Logo} alt="Icon" width="100px" /></a>
+        <Box className = "navbar" style={{display:"flex", margin:"auto", justifyContent:"space-between", textDecoration:"none",  }} ><a href="/"><img src={Logo} alt="Icon" width="100px" /></a>
             {links.map((e)=>{
                 return  (
                     <>
+                    
                     
                     
                     <Link key={e.path} to={e.path} >{e.title}</Link>
                     
                    
                    
+                    
+                    
+                    
                     </>
+
                 )
             })}
-        </div>
+        </Box>
         </>
     )
 }
