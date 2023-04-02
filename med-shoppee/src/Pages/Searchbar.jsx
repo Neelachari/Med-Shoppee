@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from 'react';
+import { AuthContext } from '../Context/AuthContextProvider'
 import {
   Box,
   Input,
@@ -12,12 +13,13 @@ import { SearchIcon } from "@chakra-ui/icons";
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const toast = useToast();
+  const {data,setdata}=useContext(AuthContext)
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
     // Perform search logic and update results here
     toast({
-      title: "Search performed.",
+      title: data.filter((e)=>setdata(data)),
       status: "success",
       duration: 2000,
       isClosable: true,

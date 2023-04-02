@@ -5,20 +5,20 @@ export const AuthContext=React.createContext()
 export default function AuthContextProvider ({children}) {
     const [isAuth,setIsAuth]=useState(false)
     const [token,setToken]=useState("")
+    const [data,setdata]=useState([])
 
-    const login=(token)=>{
+    const login=()=>{
         setIsAuth(true)
-        setToken(token)
+        
     }
 
     const logout=()=>{
         setIsAuth(false)
-        setToken("")
     }
 
 
   return (
-    <AuthContext.Provider value={{isAuth, login, logout}}>
+    <AuthContext.Provider value={{isAuth, login, logout,data,setdata}}>
         {children}
     </AuthContext.Provider>
   )

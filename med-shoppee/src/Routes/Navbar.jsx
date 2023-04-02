@@ -1,12 +1,17 @@
-import React from "react"
+import React, {useContext } from 'react';
 import {Link} from "react-router-dom"
 import Logo from "../Images/Project-icon.png"
 import navbar from "./Navbar.css"
 import { Box } from "@chakra-ui/react"
 import {BsCartPlus} from "react-icons/bs"
-
+import { AuthContext } from '../Context/AuthContextProvider'
+import Login from '../Pages/Login';
 
 function Navbar() {
+    
+
+
+   
     
     const links=[
        
@@ -18,12 +23,14 @@ function Navbar() {
         {path: "/contact", title:"COVID-19" },
         {path: "/contact", title:"AYURVEDA" },
         {path: "/contact", title:"CARE PLAN" },
-        {path: "/login", title:"Login" },
+        {path: "/login",   title:"Login | Signup" },
         {path: "/BsCartPlus", title:<BsCartPlus size="20px"/> },
 
     ]
 
     
+
+   
 
     return(
         <>
@@ -54,3 +61,4 @@ function Navbar() {
 }
 
 export { Navbar }
+

@@ -9,6 +9,7 @@ const Footer = () => {
       borderColor="gray.300"
       py="2.5rem"
       fontSize="0.875rem"
+      marginTop={50}
     >
       <Box
         maxW="64rem"

@@ -3,11 +3,13 @@
     padding: 1%;
     /* border: 1px solid red; */
     margin: auto;
-    background-color: white;
+    background-color: rgb(243, 243, 243);
+    color: black;
+    margin-top: 2%;
 }
-.Container Box{
+Box :hover{
     
-    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .Container button{
    background-color: gray;
@@ -19,6 +21,16 @@
     background-color: black;
 }
 .Container h2{
-    background-color: white;
+    background-color: rgb(243, 243, 243);
     text-align: left;
+    
+}
+h4{
+    font-weight: 600;
+}
+.Container p{
+    color: red;
+}
+h5{
+    color: gray;
 }

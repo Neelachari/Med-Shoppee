@@ -34,9 +34,10 @@ const [islog,setislog]=useState(false)
           }
           else if( e.email===formData.email&&e.password===formData.password){
             //window.location.href = '/';
-            setislog(true)
-
             toast.success('✅ Login Successful')
+            setTimeout(() => {
+              setislog(true)
+            }, 2000);
              
           }
 

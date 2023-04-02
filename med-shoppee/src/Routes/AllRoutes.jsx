@@ -11,7 +11,10 @@ import { SignUp } from '../Pages/SignUp'
 import { PrivateRoute } from './PrivateRoute'
 import { Admin } from '../Pages/Admin'
 import Footer from '../Pages/Footer'
-import { BsCartPlus } from '../Pages/BsCartPlus'
+import BsCartPlus  from '../Pages/BsCartPlus'
+import PaymentPage from '../Pages/Paymnet'
+
+
 
 
 
@@ -30,6 +33,8 @@ const AllRoutes = () => {
         <Route path="/Admin" element={<Admin/>}></Route>
         <Route path="/Footer" element={<Footer/>}></Route>
         <Route path="/BsCartPlus" element={<BsCartPlus/>}></Route>
+        <Route path="/PaymentPage" element={<PaymentPage/>}></Route>
+     
     </Routes>
     
     )
