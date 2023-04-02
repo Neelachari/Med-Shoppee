@@ -116,8 +116,6 @@ const [dataLimit, setDataLimit] = useState(9);
     }
 
     
-
-
   return (
     <>
     <Heading>Welcome To Admin Page</Heading>

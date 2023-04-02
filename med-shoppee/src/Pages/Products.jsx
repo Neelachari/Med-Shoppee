@@ -1,14 +1,18 @@
-import {useReducer, useEffect, useState} from 'react'
+import {useReducer, useEffect, useState,useContext} from 'react'
 import {Box,Button,Center,Img,SimpleGrid,Text,VStack,Select,Spinner, Heading, Checkbox, CheckboxGroup,Spacer} from "@chakra-ui/react"
 import axios from "axios";
 import produ from "./Produ.css"
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
+import AuthContextProvider, { AuthContext } from '../Context/AuthContextProvider'
 
 const initialState = {
   data: [],
   isLoading: false,
   error: null,
 };
+
+
+
 
 const reducer = (state,action) => {
   switch (action.type) {
@@ -42,58 +46,100 @@ export default function AllProducts() {
   // console.log(data)
 const [pageNumber, setPageNumber] = useState(1);
 const [dataLimit, setDataLimit] = useState(9);
-    
-  useEffect(()=>{
+const [sort,setsort]=useState("")
+const [filter,setfilter]=useState("")
+const [cart,setcartdata]=useState([])
+const {data,setdata}=useContext(AuthContext)
+
+const getDat=(sort,pageNumber,filter,handlecart)=>{
+  if(sort==""&&filter==""){
+    dispatch({ type: "FETCH_DATA_REQUEST" });
+  var pageData=axios
+    .get(`http://localhost:8080/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+    .then((res) => {
+      dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
+    })
+    .catch((err) => {
+      dispatch({ type: "FETCH_DATA_FAILURE", payload: err.message });
+    });
+    console.log(pageData)
+
+  }
+  else if(sort=="asc"||"desc"){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`http://localhost:8080/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+      .get(`http://localhost:8080/Products?_sort=price&_order=${sort}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
       .catch((err) => {
         dispatch({ type: "FETCH_DATA_FAILURE", payload: err.message });
       });
-      console.log(pageData)
-  },[pageNumber, dataLimit])
+
+  }
+  else if(filter){
+    dispatch({ type: "FETCH_DATA_REQUEST" });
+    var pageData=axios
+      .get(`http://localhost:8080/Products?category=${filter}`)
+      .then((res) => {
+        dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
+      })
+      .catch((err) => {
+        dispatch({ type: "FETCH_DATA_FAILURE", payload: err.message });
+      });
+
+
+  }
+  
+  
+}    
+  useEffect(()=>{
+    getDat(sort,pageNumber,filter)
+  },[pageNumber, dataLimit, sort,filter])
 
   //console.log(pageNumber,dataLimit)
 
 
   const handleClick = (id) => {
-
+    
     
   };
 
+  const handlecart=(id)=>{
+     axios.get(`http://localhost:8080/Products/${id}`)
+     .then((res)=>setdata([...data,res.data]))
+      
+  }
+  console.log(data)
 
 
 
   return (
     <div class="flex" width="100%">
       <Box width="50%" padding={5}>
-      <h5>FILTERS</h5>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
+      <h5>PRODUCT TAGS</h5>
+      <Checkbox size='md' colorScheme='orange' value="Tablets" onChange={(e)=>setfilter(e.target.value)}>Tablets</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Inhalers" onChange={(e)=>setfilter(e.target.value)}>Inhalers</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Eye Care" onChange={(e)=>setfilter(e.target.value)}>Eye Care</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Syrups" onChange={(e)=>setfilter(e.target.value)}>Syrups</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Medical Devices" onChange={(e)=>setfilter(e.target.value)}>Medical Devices</Checkbox>
 
      <br></br>
 
-      <h5>FILTERS</h5>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
-      <Checkbox size='lg' colorScheme='orange'>Checkbox</Checkbox>
+      <h5>DISCOUNT</h5>
+      <Checkbox size='md' colorScheme='orange'>Less Then 10%</Checkbox>
+      <Checkbox size='md' colorScheme='orange'>Above 20%</Checkbox>
+      <Checkbox size='md' colorScheme='orange'>Above 30%</Checkbox>
+      <Checkbox size='md' colorScheme='orange'>Above 40%</Checkbox>
 
       {" "}
       {" "}
 
-      <h5>SORT</h5>
-      <Select placeholder='Select option'>
-        <option value='option1'>Option 1</option>
-        <option value='option2'>Option 2</option>
-        <option value='option3'>Option 3</option>
+      <h5>SORT BY PRICE</h5>
+      <Select placeholder='Select option' onChange={(e)=>setsort(e.target.value)}>
+        <option value='' >Rating</option>
+        <option value='asc'>Low To High</option>
+        <option value='desc'>High To Low</option>
       </Select>
       </Box>
       {
@@ -108,14 +154,18 @@ const [dataLimit, setDataLimit] = useState(9);
 
           <VStack spacing={1} p={2} >
             <Text className="name" fontSize={"15px"} fontWeight="bold">Name: {e.name}</Text>
-            <Text className="price">Price: {e.price}</Text>
+            <Text className="price">Price: ₹.{e.price}</Text>
             <Text className="description">{e.description}</Text>
+            <Text className="description">{e.category}</Text>
             <Box>
             <Button className="delete" colorScheme='orange' onClick={handleClick}>Checkout</Button>
             {"   "}
             {" "}
             {" "}
-            <Button className="delete" colorScheme='green'>Add To Cart</Button>
+            
+            <Button className="delete" colorScheme='green' onClick={()=>handlecart(e.id)}>Add To Cart</Button>
+           
+            
             </Box>
             
           </VStack>
@@ -123,9 +173,9 @@ const [dataLimit, setDataLimit] = useState(9);
         </Box>
         
 ))}
-<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber -1)} disabled={pageNumber<=1}>Pev</Button>
+<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber -1)} isDisabled={pageNumber<=1}>Pev</Button>
 <Text fontSize="15px" border="3px solid gray" padding="1%" color="green" >PAGE  {pageNumber}</Text>
-<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber +1)} disabled={pageNumber==3}>Next</Button>
+<Button colorScheme='orange' onClick={(e) => setPageNumber(pageNumber +1)} isDisabled={pageNumber==4}>Next</Button>
       </SimpleGrid>
       
 }
