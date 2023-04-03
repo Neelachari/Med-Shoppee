@@ -2,6 +2,7 @@ import { Heading, Text, Box, Flex, Stack, Button } from "@chakra-ui/react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 function PaymentPage() {
     const [cardholderName, setCardholderName] = useState("");
@@ -9,6 +10,7 @@ function PaymentPage() {
     const [expirationDate, setExpirationDate] = useState("");
     const [cvv, setCvv] = useState("");
     const [loading, setLoading] = useState(false);
+
  
   
     const handleSubmit = () => {
@@ -18,16 +20,25 @@ function PaymentPage() {
         return;
       }
   
+      
       setLoading(true);
-  
       // simulate payment process
       setTimeout(() => {
+        
+        
         setLoading(false);
-        toast.success("Payment successful!");
-        alert("Payment successful!")
-        window.location.href="/"
+        
+         //alert("Payment successful!")
+        
       }, 3000);
     };
+
+    
+  if(loading){
+    toast.success("Payment successful!");
+    return  <Navigate to="/" />
+  }
+   
 
 
   return (
@@ -41,7 +52,7 @@ function PaymentPage() {
           </Box>
           <Box>
             <Text mb={2}>Card Number</Text>
-            <input type="text"  placeholder="0000 0000 0000 0000" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
+            <input type="text" maxLength={13} placeholder="0000 0000 0000 0000" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} />
           </Box>
           <Flex justify="space-between">
             <Box mr={4} flex={1}>
@@ -54,9 +65,8 @@ function PaymentPage() {
               <input type="text" maxLength={3} placeholder="123" value={cvv} onChange={(e) => setCvv(e.target.value)} />
             </Box>
           </Flex>
-          <Button colorScheme="blue" size="lg" onClick={handleSubmit} isLoading={loading} >
-            Pay Now
-          </Button>
+          <Button colorScheme="blue" size="lg" onClick={handleSubmit} isLoading={loading} >Pay Now</Button>
+          <ToastContainer/>
         </Stack>
       </Box>
     </Flex>

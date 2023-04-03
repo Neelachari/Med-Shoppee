@@ -52,7 +52,7 @@ const [cart,setcartdata]=useState([])
 const {data,setdata}=useContext(AuthContext)
 
 const getDat=(sort,pageNumber,filter,handlecart)=>{
-  if(sort==""&&filter==""){
+  if(sort==""||filter==""){
     dispatch({ type: "FETCH_DATA_REQUEST" });
   var pageData=axios
     .get(`http://localhost:8080/Products?_page=${pageNumber}&_limit=${dataLimit}`)
@@ -80,7 +80,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   else if(filter){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`http://localhost:8080/Products?category=${filter}`)
+      .get(`http://localhost:8080/Products?&category=${filter}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
@@ -112,11 +112,11 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
     <div class="flex" width="100%">
       <Box width="50%" padding={5}>
       <h5>PRODUCT TAGS</h5>
-      <Checkbox size='md' colorScheme='orange' value="Tablets" onChange={(e)=>setfilter(e.target.value)}>Tablets</Checkbox>
-      <Checkbox size='md' colorScheme='orange' value="Inhalers" onChange={(e)=>setfilter(e.target.value)}>Inhalers</Checkbox>
-      <Checkbox size='md' colorScheme='orange' value="Eye Care" onChange={(e)=>setfilter(e.target.value)}>Eye Care</Checkbox>
-      <Checkbox size='md' colorScheme='orange' value="Syrups" onChange={(e)=>setfilter(e.target.value)}>Syrups</Checkbox>
-      <Checkbox size='md' colorScheme='orange' value="Medical Devices" onChange={(e)=>setfilter(e.target.value)}>Medical Devices</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Tablets" onChange={(e)=>{setfilter(e.target.value);setsort("")}}>Tablets</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Inhalers" onChange={(e)=>{setfilter(e.target.value);setsort("")}}>Inhalers</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Eye Care" onChange={(e)=>{setfilter(e.target.value);setsort("")}}>Eye Care</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Syrups" onChange={(e)=>{setfilter(e.target.value);setsort("")}}>Syrups</Checkbox>
+      <Checkbox size='md' colorScheme='orange' value="Medical Devices" onChange={(e)=>{setfilter(e.target.value);setsort("")}}>Medical Devices</Checkbox>
 
      <br></br>
 

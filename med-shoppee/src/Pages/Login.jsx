@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link, Navigate } from 'react-router-dom'
+import { AuthContext } from '../Context/AuthContextProvider';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-const [isAuth,setIsAuth]=useState(false)
+
+const {isAuth,setIsAuth}=useContext(AuthContext)
 
 
   const handleSubmit = async (event) => {
@@ -28,7 +30,7 @@ const [isAuth,setIsAuth]=useState(false)
             toast.error("❌ Please Enter The Credentials")
            
           }
-          else if(formData.email!=e.email&&formData.password!=e.password){
+          else if(formData.email!=e.email||formData.password!=e.password){
             toast.error("❌ Please Check the Email or password")
 
           }
@@ -56,7 +58,7 @@ const [isAuth,setIsAuth]=useState(false)
   };
 if(isAuth){
   return <Navigate to="/" />
-  setIsAuth(true)
+ 
   
 }
   return (
@@ -89,9 +91,8 @@ if(isAuth){
             <FormLabel>Password</FormLabel>
             <Input type="password" placeholder="Enter Password" name="password" value={formData.password} onChange={handleInputChange} />
           </FormControl>
-          <Button colorScheme="orange" mb="4" w="100%" type="submit">
-            Login
-          </Button>
+          <Button colorScheme="orange" mb="4" w="100%" type="submit">Login </Button>
+          <ToastContainer/>
         </form>
         <Text fontSize="sm" textAlign="center">
           Don't have an account yet? <a href="/signup">Sign up</a>.
