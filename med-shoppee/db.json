@@ -279,6 +279,15 @@
       "price": 55.99,
       "description": "Ear plugs are used to protect the ears from loud noises and prevent water from entering the ear canal.",
       "category": "Ear Care"
+    },
+    {
+      "id": "8OfJ_8i",
+      "image": "",
+      "name": "",
+      "price": "",
+      "data": [],
+      "description": "",
+      "category": ""
     }
   ],
   "users": [
@@ -288,6 +297,20 @@
       "password": "12345",
       "confirmPassword": "12345",
       "id": 2
+    },
+    {
+      "name": "Neelachari",
+      "email": "masai@masai.com",
+      "password": "147",
+      "confirmPassword": "147",
+      "id": 3
+    },
+    {
+      "name": "Masai30",
+      "email": "Neeleshnh@gmail.com",
+      "password": "8520",
+      "confirmPassword": "8520",
+      "id": 4
     }
   ]
 }

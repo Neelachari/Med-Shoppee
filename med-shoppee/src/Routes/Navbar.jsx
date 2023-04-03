@@ -25,13 +25,13 @@ console.log(isAuth)
        
         {path: "/", title:"MEDICINES" },
         {path: "/products", title:"Products" },
-        {path: "/about", title:"LAB TESTS" },
-        {path: "/contact", title:"CONSULT" },
-        {path: "/contact", title:"DOCTORS" },
-        {path: "/contact", title:"COVID-19" },
-        {path: "/contact", title:"AYURVEDA" },
-        {path: "/contact", title:"CARE PLAN" },
-        {path: "/login",   title:<BiUserCircle size="30px"/> },
+        {path: "https://www.1mg.com/labs?utm_source=1mg&utm_medium=jewel&utm_campaign=labsgrowth", title:"LAB TESTS" },
+        {path: "https://www.1mg.com/online-doctor-consultation", title:"CONSULT" },
+        {path: "https://www.1mg.com/online-doctor-consultation", title:"DOCTORS" },
+        {path: "https://www.1mg.com/coronavirus-covid19", title:"COVID-19" },
+        {path: "https://www.1mg.com/ayurveda", title:"AYURVEDA" },
+        {path: "https://www.1mg.com/subscription-plan/subscriptions", title:"CARE PLAN" },
+        {path: "/login",   title:`${isAuth?"👨‍🔬":"Login|Signup"}` },
         {path: "/BsCartPlus", title:<BsCartPlus size="20px"/> },
 
     ]
