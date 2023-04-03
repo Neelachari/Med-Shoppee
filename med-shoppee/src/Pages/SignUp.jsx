@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
 import "../SignupPage.css"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -20,13 +22,18 @@ export const SignUp = () => {
         },
         body: JSON.stringify(formData),
       });
-      if (response.ok) {
-        // show success message or redirect to login page
-        
-      } else {
-        // show error message
-        // alert("please chcek the Error")
+      if(formData.name===""&&formData.email===""&&formData.password===""&&formData.confirmPassword===""){
+        toast.error("❌ Please Enter The Credentials")
+       
       }
+      else if(formData.password!=formData.confirmPassword===""){
+        toast.error("❌ confirm password is wroung")
+
+      }
+      else if(response.ok){
+        toast.success('✅ Signup Successful')
+        alert("✅ Signup Successful")
+      } 
     } catch (error) {
       console.error(error);
       // show error message
@@ -52,6 +59,7 @@ export const SignUp = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      marginTop={25}
     >
       <Box
         border="1px solid gray"
@@ -81,7 +89,7 @@ export const SignUp = () => {
             <FormLabel>Confirm Password</FormLabel>
             <Input type="password" placeholder="Re-Enter the Password" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} />
           </FormControl>
-          <Button colorScheme="orange" mb="4" w="100%" type="submit">
+          <Button colorScheme="orange" mb="4" w="100%" type="submit" >
             Sign Up
           </Button>
         </form>

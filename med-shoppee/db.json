@@ -4,7 +4,7 @@
       "id": "1",
       "image": "https://static.timesofisrael.com/www/uploads/2021/03/iStock-639817754.jpg",
       "name": "Aspirin",
-      "price": 5.99,
+      "price": 15.99,
       "description": "Aspirin is a common pain reliever and fever reducer.",
       "category": "Tablets"
     },
@@ -12,7 +12,7 @@
       "id": "2",
       "image": "https://cpimg.tistatic.com/07373355/b/4/Ibuprofen-Tablets-800-mg.jpg",
       "name": "Ibuprofen",
-      "price": 7.99,
+      "price": 27.99,
       "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and reduce fever.",
       "category": "Tablets"
     },
@@ -20,7 +20,7 @@
       "id": "3",
       "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/c2sw0gi2dw4cwdf1ecjp.jpg",
       "name": "Accu-Chek Combo Pack",
-      "price": "1195",
+      "price": 1197.99,
       "description": "It helps in determining the blood sugar level in the body. It facilitates hassle-free usage as it does not require any manual coding.",
       "category": "Tablets"
     },
@@ -44,22 +44,25 @@
       "id": "6",
       "image": "https://www.benadryl.com.ph/sites/benadryl_ph/files/styles/product_image/public/product-images/ah_side.png",
       "name": "Diphenhydramine",
-      "price": 7.99,
-      "description": "Diphenhydramine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes, as well as to treat motion sickness and insomnia."
+      "price": 37.99,
+      "description": "Diphenhydramine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes, as well as to treat motion sickness and insomnia.",
+      "category": "Tablets"
     },
     {
       "id": "7",
       "image": "https://m.media-amazon.com/images/I/41npoSGpVnL.jpg",
       "name": "Pseudoephedrine",
-      "price": 10.99,
-      "description": "Pseudoephedrine is a decongestant used to relieve nasal congestion caused by allergies, colds, or the flu."
+      "price": 110.99,
+      "description": "Pseudoephedrine is a decongestant used to relieve nasal congestion caused by allergies, colds, or the flu.",
+      "category": "Tablets"
     },
     {
       "id": "8",
       "image": "https://www.orionlifes.com/wp-content/uploads/2020/08/Riotuss-4-scaled.jpg",
       "name": "Dextromethorphan",
       "price": 6.99,
-      "description": "Dextromethorphan is a cough suppressant used to relieve coughing caused by colds or the flu."
+      "description": "Dextromethorphan is a cough suppressant used to relieve coughing caused by colds or the flu.",
+      "category": "Syrups"
     },
     {
       "id": "9",
@@ -74,7 +77,8 @@
       "image": "https://m.media-amazon.com/images/I/71SE3QtPs0L._SY450_.jpg",
       "name": "Salicylic acid",
       "price": 8.99,
-      "description": "Salicylic acid is a common ingredient in acne treatments and is used to unclog pores and exfol"
+      "description": "Salicylic acid is a common ingredient in acne treatments and is used to unclog pores and exfol",
+      "category": "Antibiotics"
     },
     {
       "id": "11",
@@ -248,7 +252,7 @@
       "id": "32",
       "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nookeu7k5dqnoeroz53e.jpg",
       "name": "Prescription Medication",
-      "price": 536.00,
+      "price": 536,
       "description": "Prescription medications require a doctor's prescription and are used to treat various health conditions.",
       "category": "Prescriptions"
     },
@@ -284,30 +288,6 @@
       "password": "12345",
       "confirmPassword": "12345",
       "id": 2
-    },
-    {
-      "name": "Neelesh",
-      "email": "admin@gmail.com",
-      "password": "2580",
-      "confirmPassword": "2580",
-      "id": 3
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "confirmPassword": "",
-      "id": 4
-    }
-  ],
-  "cartItem": [
-    {
-      "id": "35",
-      "image": "https://cdn.pixabay.com/photo/2017/08/01/11/14/ear-plugs-2569582_1280.jpg",
-      "name": "Ear Plugs",
-      "price": 5.99,
-      "description": "Ear plugs are used to protect the ears from loud noises and prevent water from entering the ear canal.",
-      "category": "Ear Care"
     }
   ]
 }
