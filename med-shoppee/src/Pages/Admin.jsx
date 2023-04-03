@@ -135,6 +135,7 @@ const [dataLimit, setDataLimit] = useState(9);
             <Text className="name" fontSize={"15px"} fontWeight="bold">Name: {e.name}</Text>
             <Text className="price">Price: {e.price}</Text>
             <Text className="description">{e.description}</Text>
+            <Text className="category">{e.category}</Text>
             <Box>
             <Button className="Edit" colorScheme='green' >Edit</Button>
             {"   "}

@@ -20,7 +20,6 @@ export default function Home() {
       <Slick3/>
       <Slick4/>
       <Footer/>
-      
     </div>
   )
 }

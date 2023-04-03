@@ -9,7 +9,7 @@ const Login = () => {
     email: '',
     password: '',
   });
-const [islog,setislog]=useState(false)
+const [isAuth,setIsAuth]=useState(false)
 
 
   const handleSubmit = async (event) => {
@@ -35,9 +35,7 @@ const [islog,setislog]=useState(false)
           else if( e.email===formData.email&&e.password===formData.password){
             //window.location.href = '/';
             toast.success('✅ Login Successful')
-            setTimeout(() => {
-              setislog(true)
-            }, 2000);
+            setIsAuth(true)
              
           }
 
@@ -56,8 +54,9 @@ const [islog,setislog]=useState(false)
       [name]: value,
     }));
   };
-if(islog){
+if(isAuth){
   return <Navigate to="/" />
+  setIsAuth(true)
   
 }
   return (

@@ -99,12 +99,6 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
 
   //console.log(pageNumber,dataLimit)
 
-
-  const handleClick = (id) => {
-    
-    
-  };
-
   const handlecart=(id)=>{
      axios.get(`http://localhost:8080/Products/${id}`)
      .then((res)=>setdata([...data,res.data]))
@@ -158,7 +152,6 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
             <Text className="description">{e.description}</Text>
             <Text className="description">{e.category}</Text>
             <Box>
-            <Button className="delete" colorScheme='orange' onClick={handleClick}>Checkout</Button>
             {"   "}
             {" "}
             {" "}
