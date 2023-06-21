@@ -55,7 +55,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   if(sort==""||filter==""){
     dispatch({ type: "FETCH_DATA_REQUEST" });
   var pageData=axios
-    .get(`https://tiny-lime-bison-veil.cyclic.app/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+    .get(`http://localhost:8080/Products?_page=${pageNumber}&_limit=${dataLimit}`)
     .then((res) => {
       dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
     })
@@ -68,7 +68,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   else if(sort=="asc"||"desc"){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`https://tiny-lime-bison-veil.cyclic.app/Products?_sort=price&_order=${sort}`)
+      .get(`http://localhost:8080/Products?_sort=price&_order=${sort}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
@@ -80,7 +80,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   else if(filter){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`https://tiny-lime-bison-veil.cyclic.app/Products?&category=${filter}`)
+      .get(`http://localhost:8080/Products?&category=${filter}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
@@ -100,7 +100,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   //console.log(pageNumber,dataLimit)
 
   const handlecart=(id)=>{
-     axios.get(`https://tiny-lime-bison-veil.cyclic.app/Products/${id}`)
+     axios.get(`http://localhost:8080/Products/${id}`)
      .then((res)=>setdata([...data,res.data]))
       
   }

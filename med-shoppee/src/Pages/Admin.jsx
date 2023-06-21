@@ -104,13 +104,13 @@ const [dataLimit, setDataLimit] = useState(9);
   
     const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post(`https://tiny-lime-bison-veil.cyclic.app/Products`,state)
+      axios.post(`http://localhost:8080/Products`,state)
       dispatch({type:"RESET"})
     };
   
 
     const HandleDelete=(id)=>{
-      axios.delete(`https://tiny-lime-bison-veil.cyclic.app/Products/${id}`)
+      axios.delete(`http://localhost:8080/Products/${id}`)
       .then((res)=>dispatch({type:"FETCH_DATA_SUCCESS",payload:res.data}))
       console.log(id)
     }
