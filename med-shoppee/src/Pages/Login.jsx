@@ -17,7 +17,7 @@ const {isAuth,setIsAuth}=useContext(AuthContext)
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/users', {
+      const response = await fetch('https://tiny-lime-bison-veil.cyclic.app/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
