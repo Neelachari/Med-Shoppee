@@ -89,7 +89,7 @@ const [dataLimit, setDataLimit] = useState(9);
     useEffect(()=>{
       dispatch({ type: "FETCH_DATA_REQUEST" });
    axios
-        .get(`https://tiny-lime-bison-veil.cyclic.app/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+        .get(`https://outrageous-puce-hippopotamus.cyclic.app/Products?_page=${pageNumber}&_limit=${dataLimit}`)
         .then((res) => {
           dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
         })
@@ -104,13 +104,13 @@ const [dataLimit, setDataLimit] = useState(9);
   
     const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post(`http://localhost:8080/Products`,state)
+      axios.post(`https://outrageous-puce-hippopotamus.cyclic.app/Products`,state)
       dispatch({type:"RESET"})
     };
   
 
     const HandleDelete=(id)=>{
-      axios.delete(`http://localhost:8080/Products/${id}`)
+      axios.delete(`https://outrageous-puce-hippopotamus.cyclic.app/Products/${id}`)
       .then((res)=>dispatch({type:"FETCH_DATA_SUCCESS",payload:res.data}))
       console.log(id)
     }
