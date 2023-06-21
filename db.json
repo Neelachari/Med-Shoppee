@@ -1,0 +1,301 @@
+{
+  "Products": [
+    {
+      "id": "1",
+      "image": "https://static.timesofisrael.com/www/uploads/2021/03/iStock-639817754.jpg",
+      "name": "Aspirin",
+      "price": 15.99,
+      "description": "Aspirin is a common pain reliever and fever reducer.",
+      "category": "Tablets"
+    },
+    {
+      "id": "2",
+      "image": "https://cpimg.tistatic.com/07373355/b/4/Ibuprofen-Tablets-800-mg.jpg",
+      "name": "Ibuprofen",
+      "price": 27.99,
+      "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and reduce fever.",
+      "category": "Tablets"
+    },
+    {
+      "id": "3",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/c2sw0gi2dw4cwdf1ecjp.jpg",
+      "name": "Accu-Chek Combo Pack",
+      "price": 1197.99,
+      "description": "It helps in determining the blood sugar level in the body. It facilitates hassle-free usage as it does not require any manual coding.",
+      "category": "Tablets"
+    },
+    {
+      "id": "4",
+      "image": "https://careformulationlabs.com/wp-content/uploads/2021/09/NAPROXEN-D-1.jpg",
+      "name": "Naproxen",
+      "price": 8.99,
+      "description": "Naproxen is an NSAID used to relieve pain, reduce fever, and reduce inflammation.",
+      "category": "Tablets"
+    },
+    {
+      "id": "5",
+      "image": "https://5.imimg.com/data5/QH/EO/MY-6299000/loratadine-10-mg-tablets-500x500.jpg",
+      "name": "Loratadine",
+      "price": 9.99,
+      "description": "Loratadine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes.",
+      "category": "Tablets"
+    },
+    {
+      "id": "6",
+      "image": "https://www.benadryl.com.ph/sites/benadryl_ph/files/styles/product_image/public/product-images/ah_side.png",
+      "name": "Diphenhydramine",
+      "price": 37.99,
+      "description": "Diphenhydramine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes, as well as to treat motion sickness and insomnia.",
+      "category": "Tablets"
+    },
+    {
+      "id": "7",
+      "image": "https://m.media-amazon.com/images/I/41npoSGpVnL.jpg",
+      "name": "Pseudoephedrine",
+      "price": 110.99,
+      "description": "Pseudoephedrine is a decongestant used to relieve nasal congestion caused by allergies, colds, or the flu.",
+      "category": "Tablets"
+    },
+    {
+      "id": "8",
+      "image": "https://www.orionlifes.com/wp-content/uploads/2020/08/Riotuss-4-scaled.jpg",
+      "name": "Dextromethorphan",
+      "price": 6.99,
+      "description": "Dextromethorphan is a cough suppressant used to relieve coughing caused by colds or the flu.",
+      "category": "Syrups"
+    },
+    {
+      "id": "9",
+      "image": "https://m.media-amazon.com/images/I/71A9SthwgdL._SY679_.jpg",
+      "name": "Guaifenesin",
+      "price": 7.99,
+      "description": "Guaifenesin is an expectorant used to relieve chest congestion caused by colds or the flu.",
+      "category": "Tablets"
+    },
+    {
+      "id": "10",
+      "image": "https://m.media-amazon.com/images/I/71SE3QtPs0L._SY450_.jpg",
+      "name": "Salicylic acid",
+      "price": 8.99,
+      "description": "Salicylic acid is a common ingredient in acne treatments and is used to unclog pores and exfol",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "11",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/nimrrccivlkapnxsstc4.jpg",
+      "name": "Ventolin Inhaler",
+      "price": 19.99,
+      "description": "Ventolin inhaler is used to treat bronchospasm (wheezing, shortness of breath) associated with lung diseases such as asthma.",
+      "category": "Inhalers"
+    },
+    {
+      "id": "12",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/0976ec3926044cf0bcb3b6a94c34b698.jpg",
+      "name": "Amoxicillin",
+      "price": 12.99,
+      "description": "Amoxicillin is an antibiotic used to treat bacterial infections.",
+      "category": "Antibiotics"
+    },
+    {
+      "id": "13",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/ef3325d0c60d40fd8c5cdd466166be9f.jpg",
+      "name": "Band-Aids",
+      "price": 3.99,
+      "description": "Band-Aids are adhesive bandages used to cover and protect minor wounds.",
+      "category": "First Aid"
+    },
+    {
+      "id": "14",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/f996ebf5-3b63-4fe6-ac43-25fc63d366e5.jpeg",
+      "name": "Mouthwash",
+      "price": 7.99,
+      "description": "Mouthwash is a liquid used to rinse the mouth and freshen breath.",
+      "category": "Oral Care"
+    },
+    {
+      "id": "15",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/pkvufpagxv5grqmczatb.jpg",
+      "name": "Insulin Syringe",
+      "price": 21.99,
+      "description": "Insulin syringes are used to administer insulin injections for diabetes.",
+      "category": "Diabetes Care"
+    },
+    {
+      "id": "16",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/lb96aglaut0prr58p9kh.jpg",
+      "name": "Tylenol",
+      "price": 8.99,
+      "description": "Tylenol is a pain reliever and fever reducer used to treat mild to moderate pain.",
+      "category": "Tablets"
+    },
+    {
+      "id": "17",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/xn0n7khy5vzfnqkxwfn8.jpg",
+      "name": "Eye Drops",
+      "price": 6.99,
+      "description": "Eye drops are used to treat dry eyes, redness, and allergies.",
+      "category": "Eye Care"
+    },
+    {
+      "id": "18",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/slu55dkitgcybgs5h7z1.jpg",
+      "name": "Antibacterial Ointment",
+      "price": 7.99,
+      "description": "Antibacterial ointment is used to prevent and treat skin infections.",
+      "category": "Topical"
+    },
+    {
+      "id": "19",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/09a51e1c4d3243c98ec22a7c5645f622.jpg",
+      "name": "Digital Thermometer",
+      "price": 14.99,
+      "description": "Digital thermometers are used to measure body temperature.",
+      "category": "Medical Devices"
+    },
+    {
+      "id": "20",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/nfqf5faahlo1jxy0sbbp.jpg",
+      "name": "Ear Plugs",
+      "price": 3.99,
+      "description": "Ear plugs are used to protect the ears from loud noises and to prevent water from entering the ear canal.",
+      "category": "Ear Care"
+    },
+    {
+      "id": "21",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/56441de5c4684ad8b26eaab2035c944d.jpg",
+      "name": "Blood Glucose Meter",
+      "price": 24.99,
+      "description": "Blood glucose meters are used to measure blood sugar levels for diabetes management.",
+      "category": "Diabetes Care"
+    },
+    {
+      "id": "22",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/oxv5o4hvmd1j5po5ibsj.jpg",
+      "name": "Cough Syrup",
+      "price": 9.99,
+      "description": "Cough syrup is used to relieve cough and cold symptoms.",
+      "category": "Syrups"
+    },
+    {
+      "id": "23",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/jgjg6aqke16ap4no0iw2.jpg",
+      "name": "Insulin Syringe",
+      "price": 122.99,
+      "description": "Insulin syringes are used to administer insulin injections for diabetes management.",
+      "category": "Diabetes Care"
+    },
+    {
+      "id": "24",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/omz1zuuelyaqnupl0wwe.png",
+      "name": "Multivitamin",
+      "price": 239.99,
+      "description": "Multivitamins are used to supplement the diet with essential vitamins and minerals.",
+      "category": "Supplements"
+    },
+    {
+      "id": "25",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/fydugyjapoky91qhdx3s.jpg",
+      "name": "Asthma Inhaler",
+      "price": 419.99,
+      "description": "Asthma inhalers are used to relieve asthma symptoms and prevent asthma attacks.",
+      "category": "Respiratory Care"
+    },
+    {
+      "id": "26",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/zu4lyipyx7na7vvw60xt.jpg",
+      "name": "Antihistamine",
+      "price": 739.99,
+      "description": "Antihistamines are used to relieve allergy symptoms, such as runny nose, itching, and sneezing.",
+      "category": "Tablets"
+    },
+    {
+      "id": "27",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/a5c00abfc40b49d38ef059da263b0e32.jpg",
+      "name": "Blood Pressure Monitor",
+      "price": 1134.99,
+      "description": "Blood pressure monitors are used to measure blood pressure for hypertension management.",
+      "category": "Medical Devices"
+    },
+    {
+      "id": "28",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/spzk0rogfvbc4ddv82nj.jpg",
+      "name": "First Aid Kit",
+      "price": 2124.99,
+      "description": "A first aid kit contains basic medical supplies for treating minor injuries and emergencies.",
+      "category": "Medical Supplies"
+    },
+    {
+      "id": "29",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/anmvxqumjyyd084kchln.jpg",
+      "name": "Pain Relief Gel",
+      "price": 257.99,
+      "description": "Pain relief gels are used topically to relieve pain and inflammation caused by injuries or arthritis.",
+      "category": "Topicals"
+    },
+    {
+      "id": "30",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/erlwrssmxxt2xd37vhs3.jpg",
+      "name": "Antacid Tablets",
+      "price": 116.99,
+      "description": "Antacid tablets are used to relieve heartburn and acid reflux.",
+      "category": "Tablets"
+    },
+    {
+      "id": "31",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/ybe27j1sqmjwyqsbkidj.jpg",
+      "name": "Vitamin B12 Injection",
+      "price": 239.99,
+      "description": "Vitamin B12 injections are used to supplement vitamin B12 deficiency and improve energy levels.",
+      "category": "Injections"
+    },
+    {
+      "id": "32",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/nookeu7k5dqnoeroz53e.jpg",
+      "name": "Prescription Medication",
+      "price": 536,
+      "description": "Prescription medications require a doctor's prescription and are used to treat various health conditions.",
+      "category": "Prescriptions"
+    },
+    {
+      "id": "33",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/4f9365ae7872447a8e03cd04bdec5dd0.jpg",
+      "name": "Muscle Relaxant Cream",
+      "price": 74.99,
+      "description": "Muscle relaxant creams are used topically to relieve muscle pain and stiffness.",
+      "category": "Topicals"
+    },
+    {
+      "id": "34",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/mbtzuoehh7kydtco0pv2.jpg",
+      "name": "Nasal Spray",
+      "price": 59.99,
+      "description": "Nasal sprays are used to relieve nasal congestion and allergies.",
+      "category": "Nasal Care"
+    },
+    {
+      "id": "35",
+      "image": "https://onemg.gumlet.io/l_watermark_346,w_120,h_120/a_ignore,w_120,h_120,c_fit,q_auto,f_auto/cropped/hstjtk50vihiijjnqow4.png",
+      "name": "Ear Plugs",
+      "price": 55.99,
+      "description": "Ear plugs are used to protect the ears from loud noises and prevent water from entering the ear canal.",
+      "category": "Ear Care"
+    }
+    
+  ],
+  "users": [
+    {
+      "name": "Neelesh",
+      "email": "Neeleshnh@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 2
+    },
+    {
+      "name": "Neelachari",
+      "email": "masai@masai.com",
+      "password": "147",
+      "confirmPassword": "147",
+      "id": 3
+    }
+  ]
+}
