@@ -7,6 +7,9 @@ import {
   InputLeftElement,
   IconButton,
   useToast,
+  Text,
+  Button,
+  Flex,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 
@@ -38,8 +41,9 @@ const SearchBar = () => {
   };
 
   return (
-    < >
-    <Box as="form" onSubmit={handleSubmit} width="60%" margin="auto" marginTop={10}>
+   <>
+    <Flex >
+    <Box as="form" onSubmit={handleSubmit} width="80%" margin="auto" marginTop={4} >
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"
@@ -48,14 +52,15 @@ const SearchBar = () => {
         />
         <Input
           type="text"
-          placeholder="Search"
+          placeholder="Search for Medicines and Health Products"
           value={searchTerm}
           onChange={handleSearch}
           margin="2%"
+         
         />
         <IconButton
           aria-label="Search"
-          width="10%"
+          width="15%"
           icon={<SearchIcon />}
           colorScheme="orange"
           margin="2%"
@@ -63,12 +68,9 @@ const SearchBar = () => {
           
         />
       </InputGroup>
-      
     </Box>
-    <Box>
-        
-    </Box>
-    </>
+    </Flex>
+   </>
   );
 };
 

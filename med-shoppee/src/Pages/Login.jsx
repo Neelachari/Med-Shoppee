@@ -56,11 +56,14 @@ const {isAuth,setIsAuth}=useContext(AuthContext)
       [name]: value,
     }));
   };
+
+
 if(isAuth){
   return <Navigate to="/" />
- 
   
 }
+
+
   return (
     <Box
       padding="3%"

@@ -36,10 +36,6 @@ console.log(isAuth)
 
     ]
 
-
-   
-
-
     return(
         <>
        

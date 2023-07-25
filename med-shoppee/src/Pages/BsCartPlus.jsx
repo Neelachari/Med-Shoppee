@@ -46,7 +46,7 @@ var CartTotal=0
           <Box textAlign="center" >
             <Text fontSize="lg" mb="2">quantity</Text>
             <Button size="sm" isDisabled={qnt==1} onClick={(e)=>setQnt(qnt-1)} >-</Button>
-            <Button size="sm" isDisabled={true} >{qnt}</Button>
+           <span>{qnt}</span>
             <Button size="sm" onClick={(e)=>setQnt(qnt+1)} >+</Button>
           </Box>
           <Spacer />

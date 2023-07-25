@@ -7,7 +7,7 @@ export default function AuthContextProvider ({children}) {
     const [token,setToken]=useState("")
     const [data,setdata]=useState([])
 
-    
+   
 
 
   return (
