@@ -8,12 +8,15 @@ import Slick4 from "./slick4"
 import home from "./home.css"
 import Footer from './Footer'
 import { Spacer } from '@chakra-ui/react'
+import Navbar2 from '../Routes/Navbar2'
 
 export default function Home() {
   return (
     <div>
       <h1 className = "home_page" >Welcome to Home Page</h1>
+     
       <SearchBar/>
+      <Navbar2/>
       <SimpleSlider/>
       <Slick1/>
       <Slick2/>

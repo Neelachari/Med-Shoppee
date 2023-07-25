@@ -22,12 +22,15 @@ export default class SimpleSlider extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      
     };
     return (
       
       <div>
-        <Slider {...settings} ref={(slider) => (this.slider = slider)}>
+        <div className="posterHead">
+          <div style={{width:"70%"}} >
+          <Slider {...settings} ref={(slider) => (this.slider = slider)}>
           <div>
             <img width="100%" src="https://onemg.gumlet.io/46b33653-b14c-4708-b379-1dfb903bacab_1674801336.jpg?w=899&h=200&format=auto" alt="1"/>
           </div>
@@ -47,6 +50,12 @@ export default class SimpleSlider extends Component {
           <img width="100%" src="https://onemg.gumlet.io/9b011fe6-ddf6-46a7-a3e4-f965e7afb8eb_1679997283.png?w=899&h=200&format=auto" alt="1"/>
           </div>
         </Slider>
+          </div>
+
+          <div style={{width:"30%"}}>
+            <img src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/e2dce0fd-629a-445f-9b32-a65ae65bbbef.png" alt="" />
+          </div>
+        </div>
         <h2>Tata 1mg: India’s Leading Online Pharmacy & Healthcare Platform</h2>
       <a href="https://www.1mg.com/subscription-plan/subscriptions?utm_source=cpsales&utm_medium=allcampaigns&utm_campaign=homepage_bottom_scroller&referer=mini_care_plan_home_page"><img  id="poster"src="https://onemg.gumlet.io/marketing/29087450-0f25-4856-96fc-62f4ea81bbd3.png" alt="poster"/></a>
       
