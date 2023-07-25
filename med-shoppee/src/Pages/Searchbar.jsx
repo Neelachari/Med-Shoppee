@@ -54,6 +54,7 @@ const SearchBar = () => {
           type="text"
           placeholder="Search for Medicines and Health Products"
           value={searchTerm}
+          bg={'gray.100'}
           onChange={handleSearch}
           margin="2%"
          
