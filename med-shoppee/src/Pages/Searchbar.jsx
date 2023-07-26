@@ -48,7 +48,7 @@ const SearchBar = () => {
         <InputLeftElement
           pointerEvents="none"
           margin="2%"
-          children={<SearchIcon color="orange.300"   />}
+          children={<SearchIcon color="orange.300"   /> }
         />
         <Input
           type="text"
