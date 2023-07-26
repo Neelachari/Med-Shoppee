@@ -25,12 +25,14 @@ Box :hover{
     text-align: left;
     
 }
-h4{
+ h5{
     font-weight: 600;
+    color: gray;
 }
 .Container p{
-    color: red;
+    color: rgb(17, 223, 17);
 }
+
 h5{
     color: gray;
 }

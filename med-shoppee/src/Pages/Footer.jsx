@@ -136,13 +136,13 @@ const Footer = () => {
   );
 };
 
-type LinkItemProps = {
-  text?: string;
-  isTag?: boolean;
-  tagText?: string;
-};
+// type LinkItemProps = {
+//   text?: string;
+//   isTag?: boolean;
+//   tagText?: string;
+// };
 
-const LinkItem = ({ text, isTag = false, tagText }: LinkItemProps) => {
+const LinkItem = ({ text, isTag = false, tagText }) => {
   return (
     <ListItem display="flex">
       <Link

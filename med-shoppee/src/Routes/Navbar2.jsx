@@ -125,7 +125,7 @@ const DesktopNav = () => {
                 border={0}
                 boxShadow={'sm'}
                 bg={popoverContentBgColor}
-                p={4}
+                p={1}
                 rounded={'sm'}
                 minW={'sm'}>
                 <Stack>
@@ -198,6 +198,7 @@ const MobileNavItem = ({ label, children, href }) => {
         href={href ?? '#'}
         justifyContent="space-between"
         alignItems="center"
+        fontSize={"5px"}
         _hover={{
           textDecoration: 'none',
         }}>
@@ -209,8 +210,8 @@ const MobileNavItem = ({ label, children, href }) => {
             as={ChevronDownIcon}
             transition={'all .25s ease-in-out'}
             transform={isOpen ? 'rotate(180deg)' : ''}
-            w={3}
-            h={3}
+            w={1}
+            h={1}
           />
         )}
       </Box>
