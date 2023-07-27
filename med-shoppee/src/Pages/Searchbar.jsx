@@ -43,7 +43,7 @@ const SearchBar = () => {
   return (
    <>
     <Flex >
-    <Box as="form" onSubmit={handleSubmit} width="80%" margin="auto" marginTop={4} >
+    <Box as="form" onSubmit={handleSubmit} width="80%" margin="auto" marginTop={0} >
       <InputGroup>
         <InputLeftElement
           pointerEvents="none"

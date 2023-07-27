@@ -15,7 +15,7 @@ export const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('https://outrageous-puce-hippopotamus.cyclic.app/users', {
+      const response = await fetch('http://localhost:8080/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

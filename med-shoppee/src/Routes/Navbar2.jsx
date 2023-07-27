@@ -31,8 +31,10 @@ export default function Navbar2() {
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
-        minH={'8px'}
-        py={{ base: 2 }}
+        minH={'0px'}
+        boder={"1px solid red"}
+        mt={'0px'}
+        py={{ base: 0 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={'solid'}
@@ -67,7 +69,7 @@ export default function Navbar2() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={3}>
+          spacing={0}>
           {/* <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
             Sign In
           </Button> */}
@@ -196,7 +198,7 @@ const MobileNavItem = ({ label, children, href }) => {
         py={2}
         as="a"
         href={href ?? '#'}
-        justifyContent="space-between"
+        justifyContent="space-evenly"
         alignItems="center"
         fontSize={"5px"}
         _hover={{
