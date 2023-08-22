@@ -140,6 +140,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
       {
         state.isLoading ? (
           <CircularProgress isIndeterminate color='orange' />
+          
         ) : <SimpleGrid className="main_container" columns={{ base: 1, sm: 2, md: 3 }} spacing={10} padding={5}  >
           {state.data.map((e)=>(
         <Box className="catsDetails" key={e.id} border='1px' borderColor='gray.200' >
