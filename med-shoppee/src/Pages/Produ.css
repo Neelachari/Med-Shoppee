@@ -1,5 +1,7 @@
 .flex{
     display: flex;
+    margin-top: -100px;
+   /* border: 5px solid red; */
  
 }
 .flex h5{
@@ -20,7 +22,8 @@
   
   .catsDetails {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
+    background-color: #fcf7f7;
   }
   
   .name {
