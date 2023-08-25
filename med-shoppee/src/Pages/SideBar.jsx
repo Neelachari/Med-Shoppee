@@ -65,8 +65,6 @@ export const SideBar = () => {
     }
 
    
-
-
   return (
     <DIV>
          <h1>Filter By category</h1>
