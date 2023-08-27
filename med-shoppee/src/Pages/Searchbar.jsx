@@ -22,7 +22,7 @@ const SearchBar = () => {
     setSearchTerm(event.target.value);
     // Perform search logic and update results here
     toast({
-      title: data.filter((e)=>setdata(data)),
+      title: data.filter((e)=>setdata(e.data)),
       status: "success",
       duration: 2000,
       isClosable: true,

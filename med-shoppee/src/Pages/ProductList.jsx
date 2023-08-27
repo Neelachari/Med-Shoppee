@@ -9,7 +9,8 @@ export const ProductList = () => {
   const [searchParms]=useSearchParams()
   const disptch=useDispatch()
   const products=useSelector((store)=> store.productReducer.products)
-  
+
+
 
   console.log(searchParms.getAll('category'))
   console.log(searchParms.getAll('gender'));
@@ -20,6 +21,7 @@ export const ProductList = () => {
       gender:searchParms.getAll('gender'),
       _sort:searchParms.get("order") && "price",
       _order:searchParms.get("order"),
+      
      
   
     }

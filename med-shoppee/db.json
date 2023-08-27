@@ -6,7 +6,8 @@
       "name": "Aspirin",
       "price": 15.99,
       "description": "Aspirin is a common pain reliever and fever reducer.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.3
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "name": "Ibuprofen",
       "price": 27.99,
       "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and reduce fever.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.4
     },
     {
       "id": "3",
@@ -22,7 +24,8 @@
       "name": "Accu-Chek Combo Pack",
       "price": 1197.99,
       "description": "It helps in determining the blood sugar level in the body. It facilitates hassle-free usage as it does not require any manual coding.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.2
     },
     {
       "id": "4",
@@ -30,7 +33,8 @@
       "name": "Naproxen",
       "price": 8.99,
       "description": "Naproxen is an NSAID used to relieve pain, reduce fever, and reduce inflammation.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.5
     },
     {
       "id": "5",
@@ -38,7 +42,8 @@
       "name": "Loratadine",
       "price": 9.99,
       "description": "Loratadine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.3
     },
     {
       "id": "6",
@@ -46,7 +51,8 @@
       "name": "Diphenhydramine",
       "price": 37.99,
       "description": "Diphenhydramine is an antihistamine used to relieve allergy symptoms, such as runny nose, sneezing, and itchy eyes, as well as to treat motion sickness and insomnia.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.1
     },
     {
       "id": "7",
@@ -54,7 +60,8 @@
       "name": "Pseudoephedrine",
       "price": 110.99,
       "description": "Pseudoephedrine is a decongestant used to relieve nasal congestion caused by allergies, colds, or the flu.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.4
     },
     {
       "id": "8",
@@ -62,7 +69,8 @@
       "name": "Dextromethorphan",
       "price": 6.99,
       "description": "Dextromethorphan is a cough suppressant used to relieve coughing caused by colds or the flu.",
-      "category": "Syrups"
+      "category": "Syrups",
+      "rating": 4.5
     },
     {
       "id": "9",
@@ -70,7 +78,8 @@
       "name": "Guaifenesin",
       "price": 7.99,
       "description": "Guaifenesin is an expectorant used to relieve chest congestion caused by colds or the flu.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.5
     },
     {
       "id": "10",
@@ -78,7 +87,8 @@
       "name": "Salicylic acid",
       "price": 8.99,
       "description": "Salicylic acid is a common ingredient in acne treatments and is used to unclog pores and exfol",
-      "category": "Antibiotics"
+      "category": "Antibiotics",
+      "rating": 4.3
     },
     {
       "id": "11",
@@ -86,7 +96,8 @@
       "name": "Ventolin Inhaler",
       "price": 19.99,
       "description": "Ventolin inhaler is used to treat bronchospasm (wheezing, shortness of breath) associated with lung diseases such as asthma.",
-      "category": "Inhalers"
+      "category": "Inhalers",
+      "rating": 4.5 
     },
     {
       "id": "12",
@@ -94,7 +105,8 @@
       "name": "Amoxicillin",
       "price": 12.99,
       "description": "Amoxicillin is an antibiotic used to treat bacterial infections.",
-      "category": "Antibiotics"
+      "category": "Antibiotics",
+      "rating": 3.8 
     },
     {
       "id": "13",
@@ -102,7 +114,8 @@
       "name": "Band-Aids",
       "price": 3.99,
       "description": "Band-Aids are adhesive bandages used to cover and protect minor wounds.",
-      "category": "First Aid"
+      "category": "First Aid",
+      "rating": 4.1
     },
     {
       "id": "14",
@@ -110,7 +123,8 @@
       "name": "Mouthwash",
       "price": 7.99,
       "description": "Mouthwash is a liquid used to rinse the mouth and freshen breath.",
-      "category": "Oral Care"
+      "category": "Oral Care",
+      "rating": 4.1
     },
     {
       "id": "15",
@@ -118,7 +132,8 @@
       "name": "Insulin Syringe",
       "price": 21.99,
       "description": "Insulin syringes are used to administer insulin injections for diabetes.",
-      "category": "Diabetes Care"
+      "category": "Diabetes Care",
+      "rating": 4.4
     },
     {
       "id": "16",
@@ -126,7 +141,8 @@
       "name": "Tylenol",
       "price": 8.99,
       "description": "Tylenol is a pain reliever and fever reducer used to treat mild to moderate pain.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.1
     },
     {
       "id": "17",
@@ -134,7 +150,8 @@
       "name": "Eye Drops",
       "price": 6.99,
       "description": "Eye drops are used to treat dry eyes, redness, and allergies.",
-      "category": "Eye Care"
+      "category": "Eye Care",
+      "rating": 4.4
     },
     {
       "id": "18",
@@ -142,7 +159,8 @@
       "name": "Antibacterial Ointment",
       "price": 7.99,
       "description": "Antibacterial ointment is used to prevent and treat skin infections.",
-      "category": "Topical"
+      "category": "Topical",
+      "rating": 4.4
     },
     {
       "id": "19",
@@ -150,7 +168,8 @@
       "name": "Digital Thermometer",
       "price": 14.99,
       "description": "Digital thermometers are used to measure body temperature.",
-      "category": "Medical Devices"
+      "category": "Medical Devices",
+      "rating": 3.8
     },
     {
       "id": "20",
@@ -158,7 +177,8 @@
       "name": "Ear Plugs",
       "price": 3.99,
       "description": "Ear plugs are used to protect the ears from loud noises and to prevent water from entering the ear canal.",
-      "category": "Ear Care"
+      "category": "Ear Care",
+      "rating": 4.8
     },
     {
       "id": "21",
@@ -166,7 +186,8 @@
       "name": "Blood Glucose Meter",
       "price": 24.99,
       "description": "Blood glucose meters are used to measure blood sugar levels for diabetes management.",
-      "category": "Diabetes Care"
+      "category": "Diabetes Care",
+      "rating": 4.8
     },
     {
       "id": "22",
@@ -174,7 +195,8 @@
       "name": "Cough Syrup",
       "price": 9.99,
       "description": "Cough syrup is used to relieve cough and cold symptoms.",
-      "category": "Syrups"
+      "category": "Syrups",
+      "rating": 4.8
     },
     {
       "id": "23",
@@ -182,7 +204,8 @@
       "name": "Insulin Syringe",
       "price": 122.99,
       "description": "Insulin syringes are used to administer insulin injections for diabetes management.",
-      "category": "Diabetes Care"
+      "category": "Diabetes Care",
+      "rating": 4.5 
     },
     {
       "id": "24",
@@ -190,7 +213,8 @@
       "name": "Multivitamin",
       "price": 239.99,
       "description": "Multivitamins are used to supplement the diet with essential vitamins and minerals.",
-      "category": "Supplements"
+      "category": "Supplements",
+      "rating": 2.9
     },
     {
       "id": "25",
@@ -198,7 +222,8 @@
       "name": "Asthma Inhaler",
       "price": 419.99,
       "description": "Asthma inhalers are used to relieve asthma symptoms and prevent asthma attacks.",
-      "category": "Respiratory Care"
+      "category": "Respiratory Care",
+      "rating": 4.6
     },
     {
       "id": "26",
@@ -206,7 +231,8 @@
       "name": "Antihistamine",
       "price": 739.99,
       "description": "Antihistamines are used to relieve allergy symptoms, such as runny nose, itching, and sneezing.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.8
     },
     {
       "id": "27",
@@ -214,7 +240,8 @@
       "name": "Blood Pressure Monitor",
       "price": 1134.99,
       "description": "Blood pressure monitors are used to measure blood pressure for hypertension management.",
-      "category": "Medical Devices"
+      "category": "Medical Devices",
+      "rating": 3.9
     },
     {
       "id": "28",
@@ -222,7 +249,8 @@
       "name": "First Aid Kit",
       "price": 2124.99,
       "description": "A first aid kit contains basic medical supplies for treating minor injuries and emergencies.",
-      "category": "Medical Supplies"
+      "category": "Medical Supplies",
+      "rating": 3.5
     },
     {
       "id": "29",
@@ -230,7 +258,8 @@
       "name": "Pain Relief Gel",
       "price": 257.99,
       "description": "Pain relief gels are used topically to relieve pain and inflammation caused by injuries or arthritis.",
-      "category": "Topicals"
+      "category": "Topicals",
+      "rating": 4.5
     },
     {
       "id": "30",
@@ -238,7 +267,8 @@
       "name": "Antacid Tablets",
       "price": 116.99,
       "description": "Antacid tablets are used to relieve heartburn and acid reflux.",
-      "category": "Tablets"
+      "category": "Tablets",
+      "rating": 4.8
     },
     {
       "id": "31",
@@ -246,7 +276,8 @@
       "name": "Vitamin B12 Injection",
       "price": 239.99,
       "description": "Vitamin B12 injections are used to supplement vitamin B12 deficiency and improve energy levels.",
-      "category": "Injections"
+      "category": "Injections",
+      "rating": 4.1
     },
     {
       "id": "32",
@@ -254,7 +285,8 @@
       "name": "Prescription Medication",
       "price": 536,
       "description": "Prescription medications require a doctor's prescription and are used to treat various health conditions.",
-      "category": "Prescriptions"
+      "category": "Prescriptions",
+      "rating": 4.1
     },
     {
       "id": "33",
@@ -262,7 +294,8 @@
       "name": "Muscle Relaxant Cream",
       "price": 74.99,
       "description": "Muscle relaxant creams are used topically to relieve muscle pain and stiffness.",
-      "category": "Topicals"
+      "category": "Topicals",
+      "rating": 4.5 
     },
     {
       "id": "34",
@@ -270,7 +303,8 @@
       "name": "Nasal Spray",
       "price": 59.99,
       "description": "Nasal sprays are used to relieve nasal congestion and allergies.",
-      "category": "Nasal Care"
+      "category": "Nasal Care",
+      "rating": 4.2
     },
     {
       "id": "35",
@@ -278,7 +312,8 @@
       "name": "Ear Plugs",
       "price": 55.99,
       "description": "Ear plugs are used to protect the ears from loud noises and prevent water from entering the ear canal.",
-      "category": "Ear Care"
+      "category": "Ear Care",
+      "rating": 4.5
     }
     
   ],

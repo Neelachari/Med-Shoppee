@@ -1,29 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { styled } from 'styled-components'
+import { Badge } from '@chakra-ui/react'
 
-export const ProductCard = ({id,name,image,brand,price,category,description}) => {
+export const ProductCard = ({id,name,image,rating,price,category,description}) => {
   return (
     <DIV key={id}>
         
         <img width="50px" src={image} alt={name} />
-        <h4>{name}</h4>
+        <h4><span>Name:</span>{name}</h4>
         {/* <h5>Brand:{brand}</h5> */}
-        <h5>Price:₹.{price}/-</h5>
-        <h6>Category:{category}</h6>
+        <h5><Badge variant='solid' colorScheme='green' w="15">
+        {rating} <span>★</span> 
+  </Badge></h5>
+        <h5><span>Price:₹.</span>{price}/-</h5>
+        <h6><span>Category</span>:{category}</h6>
         {/* <h6>Description:{description}</h6> */}
         <button id="edit">
-          <Link to={`/EditProductPage/${id}`}>Checkout</Link>
+          <Link to={`/Singlepage/${id}`}>Checkout</Link>
         </button>
     </DIV>
   )
 }
 
 const DIV=styled.div`
-border: 1px solid gray;
+/* border: 1px solid gray; */
 padding: 5px;
-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
  img{
+  border-radius: 10px;
+  height: 200px;
   width: 50%;
   justify-content: center;
   margin: auto;
@@ -60,5 +66,8 @@ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 
  h5{
     font-weight: 100px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ span{
+  font-weight: 600;
  }
 `

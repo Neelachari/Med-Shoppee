@@ -126,7 +126,6 @@ const DIV=styled.div`
   align-items: baseline;
   border-right: 1px solid gray;
   min-height: 200vh;
- 
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   h1{

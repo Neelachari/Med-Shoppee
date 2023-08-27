@@ -1,0 +1,13 @@
+#container{
+    
+}
+#img{
+    width: 30%;
+}
+#img img{
+    width: 100%;
+    padding: 20px;
+}
+#details{
+    width: 60%;
+}

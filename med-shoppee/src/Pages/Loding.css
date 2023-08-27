@@ -1,0 +1,12 @@
+#Loading{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    
+
+}
+#Loading div{
+    border: 1px solid rgb(231, 221, 221);
+    padding: 5px;
+}
