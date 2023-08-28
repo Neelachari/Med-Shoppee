@@ -132,7 +132,7 @@
       "name": "Insulin Syringe",
       "price": 21.99,
       "description": "Insulin syringes are used to administer insulin injections for diabetes.",
-      "category": "Diabetes Care",
+      "category": "Diabetes_Care",
       "rating": 4.4
     },
     {
@@ -177,7 +177,7 @@
       "name": "Ear Plugs",
       "price": 3.99,
       "description": "Ear plugs are used to protect the ears from loud noises and to prevent water from entering the ear canal.",
-      "category": "Ear Care",
+      "category": "Ear_Care",
       "rating": 4.8
     },
     {
@@ -186,7 +186,7 @@
       "name": "Blood Glucose Meter",
       "price": 24.99,
       "description": "Blood glucose meters are used to measure blood sugar levels for diabetes management.",
-      "category": "Diabetes Care",
+      "category": "Diabetes_Care",
       "rating": 4.8
     },
     {
@@ -204,7 +204,7 @@
       "name": "Insulin Syringe",
       "price": 122.99,
       "description": "Insulin syringes are used to administer insulin injections for diabetes management.",
-      "category": "Diabetes Care",
+      "category": "Diabetes_Care",
       "rating": 4.5 
     },
     {
@@ -222,7 +222,7 @@
       "name": "Asthma Inhaler",
       "price": 419.99,
       "description": "Asthma inhalers are used to relieve asthma symptoms and prevent asthma attacks.",
-      "category": "Respiratory Care",
+      "category": "Respiratory_Care",
       "rating": 4.6
     },
     {
@@ -312,8 +312,17 @@
       "name": "Ear Plugs",
       "price": 55.99,
       "description": "Ear plugs are used to protect the ears from loud noises and prevent water from entering the ear canal.",
-      "category": "Ear Care",
+      "category": "Ear_Care",
       "rating": 4.5
+    },
+    {
+      "id": "36",
+      "image": "https://cpimg.tistatic.com/07450926/b/4/Ineffective-Asthma-Inhaler.jpg",
+      "name": "Asthma Inhaler",
+      "price": 500.00,
+      "description": "Discover the future of asthma relief with our Plastic Ineffective Asthma Inhaler. Designed to provide effortless and precise medication delivery, this groundbreaking device ensures optimal treatment for your respiratory well-being. Embrace innovation and breathe freely again",
+      "category": "Respiratory_Care",
+      "rating": 4.8
     }
     
   ],

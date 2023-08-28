@@ -88,18 +88,19 @@ export const SideBar = () => {
         </div>
         <br />
         <br />
-        <h1>Filter By Products</h1>
+        <h1>Filter By Care</h1>
         <div>
-            <input type="checkbox" value={"male"}  checked={gender.includes("male")} onChange={handleGender}  />
-            <label>Men</label>
+        <input type="checkbox" value={"Diabetes_Care"}  checked={category.includes("Diabetes_Care")} onChange={handleCategory}/>
+            <label> Diabetes Care</label>
         </div>
         <div>
-            <input type="checkbox" value={"female"}  checked={gender.includes("female")} onChange={handleGender} />
-            <label>Women</label>
+            {/* <input type="checkbox" value={"Ear_Care"}  checked={gender.includes("Ear_Care")} onChange={handleGender}  /> */}
+            <input type="checkbox" value={"Ear_Care"}  checked={category.includes("Ear_Care")} onChange={handleCategory}/>
+            <label> Ear Care</label>
         </div>
         <div>
-            <input type="checkbox" value={"kids"}  checked={gender.includes("kids")} onChange={handleGender} />
-            <label>Kids</label>
+        <input type="checkbox" value={"Respiratory_Care"}  checked={category.includes("Respiratory_Care")} onChange={handleCategory}/>
+            <label> Respiratory Care</label>
         </div>
         <br />
         <br />
