@@ -6,7 +6,7 @@ export const PrivateRoute = ({children}) => {
     const {isAuth}=useContext(AuthContext)
     
     if(!isAuth){
-        return <Navigate to="/login" />
+        return <Navigate to="/login"  />
     }
     
 

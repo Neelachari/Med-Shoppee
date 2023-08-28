@@ -8,11 +8,12 @@ import { getProducts } from '../redux/products/action'
 import { useSearchParams } from 'react-router-dom'
 
 export const Homepage = () => {
-  const [searchParms]=useSearchParams()
+  const [searchParms,setSearchParms]=useSearchParams()
   const products=useSelector((store)=> store.productReducer.products)
   const [page,setPage]=useState(1)
   const isLoading=useSelector((store)=> store.productReducer.isLoading)
   const disptch=useDispatch()
+ 
  
   
 
@@ -26,17 +27,23 @@ let obj={
     gender:searchParms.getAll('gender'),
     _sort:searchParms.get("order") && "price",
     _order:searchParms.get("order"),
-    
+
+    _page:page
    
 
   }
 
 }
 
-useEffect(()=>{
-  disptch(getProducts(obj))
 
-  },[])
+
+
+useEffect(()=>{
+  
+  // setSearchParms(params)
+  disptch(getProducts(obj))
+  
+  },[page])
 
 
   return (
@@ -45,13 +52,13 @@ useEffect(()=>{
          <SideBar/>
        </div>
        <div className='homePage'>
-       <h1 style={{textAlign:"left" , marginLeft:"10px", fontWeight:"600"}}>Total Products : {products.length} </h1>
+       {/* <h1 style={{textAlign:"left" , marginLeft:"10px", fontWeight:"600"}}>Total Products : {products.length} </h1> */}
        {isLoading? <Loading/>:"" }
        {products? <ProductList/> :<Loading/>}
         <div id="page">
         <button disabled={page==1} onClick={()=> setPage(page -1) }>Prev</button>
         <h4>{page}</h4>
-        <button  onClick={()=> setPage(page + 1)} >Next</button>
+        <button disabled={page==4} onClick={()=> setPage(page + 1)} >Next</button>
       </div>
        </div>
        

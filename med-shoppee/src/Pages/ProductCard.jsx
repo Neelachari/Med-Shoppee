@@ -35,8 +35,8 @@ box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0
   margin: auto;
  }
  button{
-    background-color : #c98913;
-   
+    background-color : #c97a13;
+    border-radius: 5px ;
     width: 100px;
     color: white;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif

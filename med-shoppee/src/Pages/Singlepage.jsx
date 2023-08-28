@@ -5,16 +5,26 @@ import slick1 from "./slick1"
 import { styled } from 'styled-components'
 import { Badge } from '@chakra-ui/react'
 import Slick6 from "./Slick6"
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/products/action'
+import { BsDatabaseAdd } from 'react-icons/bs'
 
 export const Singlepage = () => {
     const {id}=useParams()
     const [data,setdata]=useState([])
+    const dispatch=useDispatch()
 
+  console.log(data)
 
     useEffect(()=>{
        axios.get(`http://localhost:8080/products/${id}`)
        .then((res)=> setdata(res.data))
     },[])
+
+
+    const handleAddtoCart=()=>{
+      dispatch(addToCart(data))
+    }
 
   return (
     <DIV>
@@ -26,13 +36,13 @@ export const Singlepage = () => {
         <h4>{data.name}</h4>
         {/* <h5>Brand:{brand}</h5> */}
         <h5><span>Price:₹.</span>{data.price}/-</h5>
-       <Badge variant='solid' colorScheme='green' w="80px" h="30px" fontSize="18px">
+       <Badge variant='solid' colorScheme='green' w="80px" h="30px" fontSize="22px">
         {data.rating} <span>★</span> 
   </Badge>
         <h6><span>Category</span>:{data.category}</h6>
         <p><span>Description</span>:{data.description}</p>
         <button id="button">
-          <Link to={`/BsCartPlus`}>ADD TO CART</Link>
+          <Link to={`/BsCartPlus`} onClick={()=>handleAddtoCart}>ADD TO CART</Link>
         </button>
          </div>
        </div>
@@ -117,10 +127,10 @@ const DIV=styled.div`
     /* border: 1px solid gray; */
     }
     #details h4{
-        font-size:28px
+        font-size:26px
     }
     #details h5{
-        font-size:28px
+        font-size:26px
     }
     #details h6{
         font-size:26px
@@ -134,7 +144,8 @@ const DIV=styled.div`
         text-align: left;
     }
     #pardetail h1{
-        font-weight:700
+        font-weight:700;
+        
     }
     #pardetail Badge{
         font-weight:700
@@ -142,7 +153,7 @@ const DIV=styled.div`
     #button{
     margin-top: 10px;
     background-color : #c98913;
-   height: 50px;
+    height: 50px;
     width: 300px;
     color: white;
     border-radius: 15px;
@@ -155,5 +166,6 @@ const DIV=styled.div`
  }
  span{
     font-weight: 600;
+    
  }
 `

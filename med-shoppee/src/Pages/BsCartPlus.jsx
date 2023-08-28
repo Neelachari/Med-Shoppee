@@ -4,11 +4,15 @@ import { Box, Button, Center, Divider, Flex, Heading, Image, SimpleGrid, Spacer,
 import { Link, Navigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useSelector } from 'react-redux';
 
 const BsCartPlus = ({removeFromCart,handlecart }) => {
   const {data,setdata}=useContext(AuthContext)
   const [qnt,setQnt]=useState(1)
-//console.log(data)
+
+  const CartItem=useSelector((store)=> store.productReducer.Cart)
+  
+  console.log(CartItem)
 
 var CartTotal=0
   data.map((e)=>{

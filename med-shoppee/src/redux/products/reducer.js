@@ -1,8 +1,9 @@
-import { GET_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
+import { ADD_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
 
 
 const initialState={
     products:[],
+    Cart:[],
     isLoading:false,
     isError:false
 }
@@ -18,6 +19,9 @@ export const reducer = (state = initialState,{type,payload}) => {
     }
     case POST_PRODUCT_SUCCESS:{
       return {...state, isError:false, isLoading:false,  products:[...state.products, payload]}
+    }
+    case ADD_PRODUCT_SUCCESS:{
+      return {...state, isError:false, isLoading:false,  Cart:[...state.products, payload]}
     }
     case GET_PRODUCT_SUCCESS:{
       return {...state, isError:false, isLoading:false, products:payload}

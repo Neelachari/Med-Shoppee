@@ -13,7 +13,7 @@ const Login = () => {
 
 const {isAuth,setIsAuth}=useContext(AuthContext)
   
-// const toast = useToast();
+const toast = useToast();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -45,6 +45,15 @@ const {isAuth,setIsAuth}=useContext(AuthContext)
             //   duration: 2000,
             //   isClosable: true,
             // })
+            //    toast({
+            //   position:"top",
+            //   isClosable: true,
+            //   duration: 2000,
+            //   status: "❌ Login failed",
+            //   render:()=>(
+            //       <Box color="white" bg="red.500" p="20px" >👀 Please Check the Email or password</Box>
+            //   )
+            // })
 
           }
           else if( e.email===formData.email&&e.password===formData.password){
@@ -57,6 +66,15 @@ const {isAuth,setIsAuth}=useContext(AuthContext)
             //   duration: 2000,
             //   isClosable: true,
             // });
+            toast({
+              position:"top",
+              isClosable: true,
+              duration: 2000,
+              status: "Welcome to mid-shopee",
+              render:()=>(
+                  <Box color="white" bg="blue.500" p="20px" >✅ Login Successful</Box>
+              )
+            })
             setIsAuth(true)
              
           }

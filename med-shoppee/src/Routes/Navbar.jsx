@@ -14,6 +14,7 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  useToast
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Logo from "../Images/Project-icon.png"
@@ -64,15 +65,19 @@ export default function Navbar() {
 
  console.log(isAuth)
 
+ const toast = useToast();
+
  const handleLogout=()=>{
   setIsAuth(false)
-    toast({
-      title: 'Logout Done.',
-      description: "We've created your account for you.",
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    })
+  toast({
+    position:"top",
+    isClosable: true,
+    duration: 2000,
+    status: "Welcome to mid-shopee",
+    render:()=>(
+        <Box color="white" bg="red.500" p="20px" >😐 Logout Successful</Box>
+    )
+  })
   
   return <Navigate to="/" />
  }
@@ -120,7 +125,7 @@ export default function Navbar() {
                 <Avatar
                 mr={"80px"}
                   size={'sm'}
-                  src={ `${isAuth ? "https://avatars.githubusercontent.com/u/112808279?v=4":'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQJDEnnVNYD3wOk0PIywPT-2m4UETU7lhOSFBO2HywWPvrH7-g45Eh4Rq9F9WxZTYONKU&usqp=CAU'}`
+                  src={ `${isAuth ? "https://img.freepik.com/free-icon/man_318-474853.jpg":'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQJDEnnVNYD3wOk0PIywPT-2m4UETU7lhOSFBO2HywWPvrH7-g45Eh4Rq9F9WxZTYONKU&usqp=CAU'}`
                     
                   }
                 />
@@ -134,7 +139,6 @@ export default function Navbar() {
                 </Link>
                 <MenuDivider />
                 <MenuItem onClick={handleLogout } >Logout</MenuItem>
-                <ToastContainer/>
               </MenuList>
             </Menu>
           </Flex>
