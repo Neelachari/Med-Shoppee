@@ -124,7 +124,7 @@ const DIV=styled.div`
   font-size: medium;
   flex-direction: column;
   align-items: baseline;
-  border-right: 1px solid red;
+  border-right: 0.5px solid orange;
   min-height: 180vh;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 

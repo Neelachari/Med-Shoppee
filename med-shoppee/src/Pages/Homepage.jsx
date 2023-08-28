@@ -82,14 +82,14 @@ display: flex;
     margin: auto;
     gap: 20px;
     margin-left: 35%;
-   
+    margin-top: 20px;
 
   }
   #page button{
     background-color: #e0793e;
     color: white;
     width: 100px;
-   font-size:large;
+    font-size:large;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
    
   }
