@@ -7,7 +7,7 @@ Its a web application that provides a platform to buy Pharmacy.It a user friendl
 
 
 
-[website Url--](https://quiet-starship-58bf5e.netlify.app/)
+[website Url--](https://mid-shoppee.netlify.app/)
 ## Tech Stack
 **Client:** Html ,Css
 **Client Server Api:** Local Storage,Json Server.
