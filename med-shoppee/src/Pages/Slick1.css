@@ -36,3 +36,64 @@ Box :hover{
 h5{
     color: gray;
 }
+
+/* @media (max-width: 768px) {
+    .Container {
+        width: 100%;
+        padding: 2%;
+        margin-top: 5%;
+    }
+
+    .Container h2 {
+        text-align: center;
+        
+    }
+
+   
+} */
+
+/* Slick1.css */
+.Container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  /* For screens smaller than 768px wide */
+  @media (max-width: 768px) {
+    .Container {
+      padding: 0;
+    }
+    h2 {
+        text-align: center;
+        font-size: smaller;
+        
+    }
+    h4 {
+        text-align: center;
+        font-size: 10px;
+        display: none;
+        
+    }
+    h5 {
+        text-align: center;
+        font-size: 10px;
+        display: none;
+        
+      }
+      p {
+        text-align: center;
+        font-size: 10px;
+        
+      }
+  
+  
+    .slick-slide {
+      padding: 0 5px; /* Adjust spacing between slides as needed */
+    }
+  }
+  

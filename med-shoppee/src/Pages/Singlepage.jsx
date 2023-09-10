@@ -1,20 +1,26 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import slick1 from "./slick1"
 import { styled } from 'styled-components'
-import { Badge } from '@chakra-ui/react'
+import { Badge, useToast } from '@chakra-ui/react'
 import Slick6 from "./Slick6"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../redux/products/action'
 import { BsDatabaseAdd } from 'react-icons/bs'
+import { pureFinalPropsSelectorFactory } from 'react-redux/es/connect/selectorFactory'
+import { AuthContext } from '../Context/AuthContextProvider'
 
 export const Singlepage = () => {
     const {id}=useParams()
     const [data,setdata]=useState([])
     const dispatch=useDispatch()
+    const navigate=useNavigate()
+    const {isAuth,setIsAuth}=useContext(AuthContext)
+    const toast = useToast();
 
-  console.log(data)
+    const Data=useSelector((store)=>store.productReducer.Cart)
+  
 
     useEffect(()=>{
        axios.get(`http://localhost:8080/products/${id}`)
@@ -23,7 +29,34 @@ export const Singlepage = () => {
 
 
     const handleAddtoCart=()=>{
-      dispatch(addToCart(data))
+      let flag=false
+      Data.forEach((el)=>{
+        if(el.id==data.id){
+          flag=true
+          
+          
+        }
+      })
+      if(flag==true){
+        toast({
+          title: `🛒 Product Already in the Cart`,
+          position: "top",
+          status:"warning",
+          isClosable: true,
+        })
+      }
+      else{
+        toast({
+          title: `✅ Product Added to Cart`,
+          position: "top",
+          status:"success",
+          isClosable: true,
+        })
+        dispatch(addToCart(data))
+        navigate("/BsCartPlus")
+      }
+      
+      console.log(data)
     }
 
   return (
@@ -41,8 +74,8 @@ export const Singlepage = () => {
   </Badge>
         <h6><span>Category</span>:{data.category}</h6>
         <p><span>Description</span>:{data.description}</p>
-        <button id="button">
-          <Link to={`/BsCartPlus`} onClick={()=>handleAddtoCart}>ADD TO CART</Link>
+        <button id="button" onClick={handleAddtoCart}>
+         ADD TO CART
         </button>
          </div>
        </div>

@@ -15,6 +15,7 @@ import BsCartPlus  from '../Pages/BsCartPlus'
 import PaymentPage from '../Pages/Paymnet'
 import { Homepage } from '../Pages/Homepage'
 import { Singlepage } from '../Pages/Singlepage'
+import Success from '../Pages/Success'
 
 
 
@@ -37,6 +38,7 @@ const AllRoutes = () => {
         <Route path="/Footer" element={<Footer/>}></Route>
         <Route path="/BsCartPlus" element={<PrivateRoute><BsCartPlus/></PrivateRoute>}></Route>
         <Route path="/PaymentPage" element={<PaymentPage/>}></Route>
+        <Route path="/Success" element={<Success/>}></Route>
      
     </Routes>
     

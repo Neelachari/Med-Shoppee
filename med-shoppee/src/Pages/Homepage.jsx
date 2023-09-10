@@ -98,4 +98,40 @@ display: flex;
     color: black;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
  }
+ @media (max-width: 768px) {
+  .displayFlexContainer {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 25%;
+  }
+
+  .homePage {
+    width: 100%;
+  }
+
+  #page {
+    margin-left: 0;
+  }
+}
+@media (max-width: 550px) {
+  .displayFlexContainer {
+    flex-direction: column;
+  }
+
+  .sideBar {
+    width: 25%;
+    font-size: 5px;
+    
+  }
+
+  .homePage {
+    width: 100%;
+  }
+
+  #page {
+    margin-left: 0;
+  }
+}
 `

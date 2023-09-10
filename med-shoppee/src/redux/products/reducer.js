@@ -21,7 +21,7 @@ export const reducer = (state = initialState,{type,payload}) => {
       return {...state, isError:false, isLoading:false,  products:[...state.products, payload]}
     }
     case ADD_PRODUCT_SUCCESS:{
-      return {...state, isError:false, isLoading:false,  Cart:[...state.products, payload]}
+      return {...state, Cart:[...state.Cart, payload]}
     }
     case GET_PRODUCT_SUCCESS:{
       return {...state, isError:false, isLoading:false, products:payload}

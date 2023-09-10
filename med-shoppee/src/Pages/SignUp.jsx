@@ -1,16 +1,22 @@
 import { useState } from 'react';
-import { Box, Button, FormControl, FormLabel, Input, Text } from '@chakra-ui/react';
+import { Box, Button, FormControl, FormLabel, Input, Text, useToast } from '@chakra-ui/react';
 import "../SignupPage.css"
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp = () => {
+   const toast=useToast()
+   const navigate=useNavigate()
+
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
   });
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -24,16 +30,43 @@ export const SignUp = () => {
       });
       if(formData.name===""&&formData.email===""&&formData.password===""&&formData.confirmPassword===""){
         toast.error("❌ Please Enter The Credentials")
+        toast({
+          position:"top",
+          isClosable: true,
+          duration: 2000,
+          status: "warning",
+          render:()=>(
+              <Box color="white" bg="red.500" p="20px" >❌ Please fill out all required fields</Box>
+          )
+        })
        
       }
       else if(formData.password!=formData.confirmPassword===""){
-        toast.error("❌ confirm password is wroung")
+        // toast.error("❌ confirm password is wroung")
+        toast({
+          position:"top",
+          isClosable: true,
+          duration: 2000,
+          status: "warning",
+          render:()=>(
+              <Box color="white" bg="red.500" p="20px" >👀 Confirm password is wroung</Box>
+          )
+        })
 
       }
       else if(response.ok){
-        toast.success('✅ Signup Successful')
-        alert("✅ Signup Successful")
+        // toast.success('✅ Signup Successful')
+        toast({
+          position:"top",
+          isClosable: true,
+          duration: 2000,
+          status: "success",
+          render:()=>(
+              <Box color="white" bg="blue.500" p="20px" >✅ Your account has been created successfully</Box>
+          )
+        })
       } 
+      navigate("/Login")
     } catch (error) {
       console.error(error);
       // show error message

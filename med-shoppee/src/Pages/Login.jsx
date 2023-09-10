@@ -35,9 +35,18 @@ const toast = useToast();
             //   duration: 2000,
             //   isClosable: true,
             // })
+            toast({
+              position:"top",
+              isClosable: true,
+              duration: 2000,
+              status: "❌ Login failed",
+              render:()=>(
+                  <Box color="white" bg="red.500" p="20px" >👀 Please enter the Email and password</Box>
+              )
+            })
            
           }
-          else if(formData.email!=e.email||formData.password!=e.password){
+          else if(e.email!=formData.email&&e.password!=formData.password){
             // toast.error("❌ Please Check the Email or password")
             // toast({
             //   title: "❌ Login failed",
@@ -45,15 +54,15 @@ const toast = useToast();
             //   duration: 2000,
             //   isClosable: true,
             // })
-            //    toast({
-            //   position:"top",
-            //   isClosable: true,
-            //   duration: 2000,
-            //   status: "❌ Login failed",
-            //   render:()=>(
-            //       <Box color="white" bg="red.500" p="20px" >👀 Please Check the Email or password</Box>
-            //   )
-            // })
+               toast({
+              position:"top",
+              isClosable: true,
+              duration: 2000,
+              status: "warning",
+              render:()=>(
+                  <Box color="white" bg="red.500" p="20px" >👀 Please Check the Email or password</Box>
+              )
+            })
 
           }
           else if( e.email===formData.email&&e.password===formData.password){
@@ -70,7 +79,7 @@ const toast = useToast();
               position:"top",
               isClosable: true,
               duration: 2000,
-              status: "Welcome to mid-shopee",
+              status: "success",
               render:()=>(
                   <Box color="white" bg="blue.500" p="20px" >✅ Login Successful</Box>
               )

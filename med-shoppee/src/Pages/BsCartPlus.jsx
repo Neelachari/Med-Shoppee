@@ -10,17 +10,18 @@ const BsCartPlus = ({removeFromCart,handlecart }) => {
   const {data,setdata}=useContext(AuthContext)
   const [qnt,setQnt]=useState(1)
 
+
   const CartItem=useSelector((store)=> store.productReducer.Cart)
   
   console.log(CartItem)
 
 var CartTotal=0
-  data.map((e)=>{
+CartItem.map((e)=>{
     CartTotal+=Math.ceil(e.price)
   })
 
   const handleRemove = (id) => {
-    const filteredData = data.filter((item) => item.id !== id);
+    const filteredData = CartItem.filter((item) => item.id !== id);
     setdata(filteredData);
   };
   
@@ -34,15 +35,15 @@ var CartTotal=0
     <Box maxW="800px" mx="auto" my="4" marginTop={50}>
     <Heading mb="4">Your Cart</Heading>
     <Divider mb="4" />
-    {data.length==0?
+    {CartItem.length==0?
      <Heading>No Items in The Cart</Heading>:""}
     <SimpleGrid columns={[1, 2]} spacing="4">
-      {data.map((item)=>
+      {CartItem.map((item)=>
         <Flex key={item.id} p="4" shadow="md" borderWidth="1px" borderRadius="md">
           <Image src={item.image} alt="" boxSize="120px" objectFit="contain" />
           <Box flex="1" ml="4">
             <Text fontSize="xl" fontWeight="semibold" mb="2">{item.title}</Text>
-            <Text fontSize="lg" mb="2">${item.price}</Text>
+            <Text fontSize="lg" mb="2">₹{item.price}</Text>
             
             <Text>description</Text>
           </Box>
@@ -69,16 +70,16 @@ var CartTotal=0
       </Flex>
       <Flex justify="space-between" mt="2">
         <Text fontSize="lg" fontWeight="semibold">Shipping:</Text>
-        <Text fontSize="lg" fontWeight="semibold">{data.length==0?"0":"$99"}</Text>
+        <Text fontSize="lg" fontWeight="semibold">{CartItem.length==0?"0":"₹.99"}</Text>
       </Flex>
       <Divider my="4" />
       <Flex justify="space-between">
         <Text fontSize="lg" fontWeight="semibold">Total:</Text>
-        <Text fontSize="lg" fontWeight="semibold">{data.length==0?"0":99+(CartTotal)*qnt}</Text>
+        <Text fontSize="lg" fontWeight="semibold">₹.{CartItem.length==0?"0":99+(CartTotal)*qnt}</Text>
       </Flex>
       <Center mt="8">
        { 
-       (data.length>0)?
+       (CartItem.length>0)?
        <Link to="/Paymentpage">
        <Button size="lg" colorScheme="green" >Proceed to Pay</Button>
        </Link>

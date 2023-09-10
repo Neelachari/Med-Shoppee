@@ -13,3 +13,26 @@ h2{
     display: flex;
     margin: auto;
 }
+/* SimpleSlider.css */
+.posterHead {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .posterHead > div {
+    width: 100%; /* Initially, each div takes 100% width */
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 768px) {
+    /* Apply styles for screens wider than 768px */
+    .posterHead > div {
+      width: 70%;
+      padding: 1rem; /* Adjust padding as needed */
+    }
+  }
+  
+  /* Add any other responsive styles as needed */
+  

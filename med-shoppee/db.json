@@ -97,7 +97,7 @@
       "price": 19.99,
       "description": "Ventolin inhaler is used to treat bronchospasm (wheezing, shortness of breath) associated with lung diseases such as asthma.",
       "category": "Inhalers",
-      "rating": 4.5 
+      "rating": 4.5
     },
     {
       "id": "12",
@@ -106,7 +106,7 @@
       "price": 12.99,
       "description": "Amoxicillin is an antibiotic used to treat bacterial infections.",
       "category": "Antibiotics",
-      "rating": 3.8 
+      "rating": 3.8
     },
     {
       "id": "13",
@@ -168,7 +168,7 @@
       "name": "Digital Thermometer",
       "price": 14.99,
       "description": "Digital thermometers are used to measure body temperature.",
-      "category": "Medical Devices",
+      "category": "Medical_Devices",
       "rating": 3.8
     },
     {
@@ -205,7 +205,7 @@
       "price": 122.99,
       "description": "Insulin syringes are used to administer insulin injections for diabetes management.",
       "category": "Diabetes_Care",
-      "rating": 4.5 
+      "rating": 4.5
     },
     {
       "id": "24",
@@ -240,7 +240,7 @@
       "name": "Blood Pressure Monitor",
       "price": 1134.99,
       "description": "Blood pressure monitors are used to measure blood pressure for hypertension management.",
-      "category": "Medical Devices",
+      "category": "Medical_Devices",
       "rating": 3.9
     },
     {
@@ -249,7 +249,7 @@
       "name": "First Aid Kit",
       "price": 2124.99,
       "description": "A first aid kit contains basic medical supplies for treating minor injuries and emergencies.",
-      "category": "Medical Supplies",
+      "category": "Medical_supplies",
       "rating": 3.5
     },
     {
@@ -295,7 +295,7 @@
       "price": 74.99,
       "description": "Muscle relaxant creams are used topically to relieve muscle pain and stiffness.",
       "category": "Topicals",
-      "rating": 4.5 
+      "rating": 4.5
     },
     {
       "id": "34",
@@ -319,27 +319,19 @@
       "id": "36",
       "image": "https://cpimg.tistatic.com/07450926/b/4/Ineffective-Asthma-Inhaler.jpg",
       "name": "Asthma Inhaler",
-      "price": 500.00,
+      "price": 500,
       "description": "Discover the future of asthma relief with our Plastic Ineffective Asthma Inhaler. Designed to provide effortless and precise medication delivery, this groundbreaking device ensures optimal treatment for your respiratory well-being. Embrace innovation and breathe freely again",
       "category": "Respiratory_Care",
       "rating": 4.8
     }
-    
   ],
   "users": [
     {
       "name": "Neelesh",
-      "email": "Neeleshnh@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345",
-      "id": 2
-    },
-    {
-      "name": "Neelachari",
-      "email": "masai@masai.com",
-      "password": "147",
-      "confirmPassword": "147",
-      "id": 3
+      "email": "user@123",
+      "password": "user@123",
+      "confirmPassword": "user@123",
+      "id": 5
     }
   ]
 }
