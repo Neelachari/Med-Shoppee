@@ -7,7 +7,7 @@ Its a web application that provides a platform to buy Pharmacy.It a user friendl
 
 
 
-[website Url--](https://strong-sherbet-ba060b.netlify.app/)
+[website Url--](https://quiet-starship-58bf5e.netlify.app/)
 ## Tech Stack
 **Client:** Html ,Css
 **Client Server Api:** Local Storage,Json Server.
@@ -24,8 +24,8 @@ https://github.com/Neelachari/supreme-honey-5251
 
 Install dependencies
 
-```bash
-  npm install
+    npm install
+
 ```
 Live Running server  -
 Start the server
@@ -33,6 +33,12 @@ Start the server
 ```bash
   npm run start
 ```
+## Login credentials
+```bash
+email: user@123 
+password: user@123
+```
+
 ## Support
 For support, email -neelachari34@gmail.com 
 
