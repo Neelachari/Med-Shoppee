@@ -89,7 +89,7 @@ const [dataLimit, setDataLimit] = useState(9);
     useEffect(()=>{
       dispatch({ type: "FETCH_DATA_REQUEST" });
    axios
-        .get(`https://outrageous-puce-hippopotamus.cyclic.app/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+        .get(`https://deployeement-server.onrender.com/Products?_page=${pageNumber}&_limit=${dataLimit}`)
         .then((res) => {
           dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
         })
@@ -104,13 +104,13 @@ const [dataLimit, setDataLimit] = useState(9);
   
     const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post(`https://outrageous-puce-hippopotamus.cyclic.app/Products`,state)
+      axios.post(`https://deployeement-server.onrender.com/Products`,state)
       dispatch({type:"RESET"})
     };
   
 
     const HandleDelete=(id)=>{
-      axios.delete(`https://outrageous-puce-hippopotamus.cyclic.app/Products/${id}`)
+      axios.delete(`https://deployeement-server.onrender.com/Products/${id}`)
       .then((res)=>dispatch({type:"FETCH_DATA_SUCCESS",payload:res.data}))
       console.log(id)
     }

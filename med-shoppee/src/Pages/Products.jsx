@@ -55,7 +55,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   if(sort==""||filter==""){
     dispatch({ type: "FETCH_DATA_REQUEST" });
   var pageData=axios
-    .get(`http://localhost:8080/Products?_page=${pageNumber}&_limit=${dataLimit}`)
+    .get(`https://deployeement-server.onrender.com/Products?_page=${pageNumber}&_limit=${dataLimit}`)
     .then((res) => {
       dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       
@@ -69,7 +69,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   else if(sort=="asc"||"desc"){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`http://localhost:8080/Products?_sort=price&_order=${sort}`)
+      .get(`https://deployeement-server.onrender.com/Products?_sort=price&_order=${sort}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
@@ -81,7 +81,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   else if(filter){
     dispatch({ type: "FETCH_DATA_REQUEST" });
     var pageData=axios
-      .get(`http://localhost:8080/Products/Products?&category=${filter}`)
+      .get(`https://deployeement-server.onrender.com/Products?&category=${filter}`)
       .then((res) => {
         dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
@@ -101,7 +101,7 @@ const getDat=(sort,pageNumber,filter,handlecart)=>{
   //console.log(pageNumber,dataLimit)
 
   const handlecart=(id)=>{
-     axios.get(`http://localhost:8080/Products/${id}`)
+     axios.get(`https://deployeement-server.onrender.com/Products/${id}`)
      .then((res)=>setdata([...data,res.data]))
       
   }

@@ -4,7 +4,7 @@ import { ADD_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT
 export const postProduct=(newProduct)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST})
 
-     axios.post(`http://localhost:8080/products`, newProduct)
+     axios.post(`https://deployeement-server.onrender.com/products`, newProduct)
     .then((res)=>{
         dispatch({type:POST_PRODUCT_SUCCESS, payload:res.data})
     })
@@ -18,7 +18,7 @@ export const postProduct=(newProduct)=>(dispatch)=>{
 
 export const getProducts = (obj)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST})
-    axios.get(`http://localhost:8080/products?_limit=9`,obj)
+    axios.get(`https://deployeement-server.onrender.com/products?_limit=9`,obj)
     .then((res)=>{
         dispatch({type:GET_PRODUCT_SUCCESS, payload :res.data})
     })

@@ -18,7 +18,7 @@ const toast = useToast();
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/users', {
+      const response = await fetch('https://deployeement-server.onrender.com/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
