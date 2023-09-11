@@ -4,16 +4,18 @@ import { Box, Button, Center, Divider, Flex, Heading, Image, SimpleGrid, Spacer,
 import { Link, Navigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RemoveItem } from '../redux/products/action';
 
 const BsCartPlus = ({removeFromCart,handlecart }) => {
   const {data,setdata}=useContext(AuthContext)
   const [qnt,setQnt]=useState(1)
+  const dispatch=useDispatch()
 
 
   const CartItem=useSelector((store)=> store.productReducer.Cart)
   
-  console.log(CartItem)
+  console.log(qnt)
 
 var CartTotal=0
 CartItem.map((e)=>{
@@ -21,43 +23,49 @@ CartItem.map((e)=>{
   })
 
   const handleRemove = (id) => {
-    const filteredData = CartItem.filter((item) => item.id !== id);
-    setdata(filteredData);
+    console.log(id)
+    dispatch(RemoveItem(id))
+    
   };
   
  
-  useEffect(()=>{
-    handleRemove()
-  },[])
+  // useEffect(()=>{
+  //   handleRemove()
+  // },[])
 
 
   return (
-    <Box maxW="800px" mx="auto" my="4" marginTop={50}>
+    <Box maxW="800px" mx="auto" my="4" marginTop={50} >
     <Heading mb="4">Your Cart</Heading>
     <Divider mb="4" />
     {CartItem.length==0?
      <Heading>No Items in The Cart</Heading>:""}
-    <SimpleGrid columns={[1, 2]} spacing="4">
+    <SimpleGrid columns={[1, 2]} spacing="4"  width={"850px"} >
       {CartItem.map((item)=>
         <Flex key={item.id} p="4" shadow="md" borderWidth="1px" borderRadius="md">
           <Image src={item.image} alt="" boxSize="120px" objectFit="contain" />
           <Box flex="1" ml="4">
-            <Text fontSize="xl" fontWeight="semibold" mb="2">{item.title}</Text>
+            <Text fontSize="sm" fontWeight="semibold" mb="2">{item.name}</Text>
             <Text fontSize="lg" mb="2">₹{item.price}</Text>
+            <Text fontSize="lg" mb="2">{item.category}</Text>
             
-            <Text>description</Text>
+            
+           
           </Box>
           <Spacer />
-          <Box textAlign="center" >
-            <Text fontSize="lg" mb="2">quantity</Text>
+          <Box textAlign="center" display={"flex"}   marginLeft={"25px"} height={"35px"} width={"300px"} >
+            
             <Button size="sm" isDisabled={qnt==1} onClick={(e)=>setQnt(qnt-1)} >-</Button>
            <span>{qnt}</span>
             <Button size="sm" onClick={(e)=>setQnt(qnt+1)} >+</Button>
           </Box>
           <Spacer />
-          <Box textAlign="right">
-            <Text fontSize="lg" mb="2">200</Text>
-            <Button size="sm" colorScheme="red"   onClick={()=>handleRemove(item.id)} >Remove</Button>
+          <Box textAlign="right"  marginRight={"80px"}>
+            <Text fontSize="lg" mb="2"></Text>
+            <br />
+            <br />
+            <br />
+            <Button size="sm" colorScheme="red"   onClick={()=> handleRemove(item.id)} >Remove</Button>
           </Box>
         </Flex>
  )}

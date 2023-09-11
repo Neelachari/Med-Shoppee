@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
+import { ADD_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, ITEM_REMOVE_SUCCESS, POST_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes"
 
 
 const initialState={
@@ -22,6 +22,11 @@ export const reducer = (state = initialState,{type,payload}) => {
     }
     case ADD_PRODUCT_SUCCESS:{
       return {...state, Cart:[...state.Cart, payload]}
+    }
+    case ITEM_REMOVE_SUCCESS:{
+      let CartData=state.Cart.filter((item) => item.id !== payload)
+      console.log(CartData,payload)
+      return {...state, Cart:CartData}
     }
     case GET_PRODUCT_SUCCESS:{
       return {...state, isError:false, isLoading:false, products:payload}

@@ -18,14 +18,21 @@ const SearchBar = () => {
   const toast = useToast();
   const {data,setdata}=useContext(AuthContext)
 
+console.log(data)
+  
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
     // Perform search logic and update results here
+
     toast({
-      title: data.filter((e)=>setdata(e.data)),
+      title: "Search Resullts",
       status: "success",
       duration: 2000,
       isClosable: true,
+      render:()=>(
+        <Box color="white" bg="orange"  p="20px" >{data.filter((e)=>setdata(e.data))}</Box>
+    )
+    
     });
   };
 
@@ -69,6 +76,11 @@ const SearchBar = () => {
           
         />
       </InputGroup>
+    </Box>
+    <Box>
+      {data?<Box height={'20vh'}>
+           <h1>{data.name}</h1>
+      </Box>:""}
     </Box>
     </Flex>
    </>
