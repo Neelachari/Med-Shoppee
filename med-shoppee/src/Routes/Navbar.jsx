@@ -138,7 +138,7 @@ export default function Navbar() {
                 <MenuItem style={{display:isAuth ? "none":"block"}} >Login</MenuItem>
                 </Link>
                 <MenuDivider />
-                <MenuItem onClick={handleLogout } >Logout</MenuItem>
+                <MenuItem style={{display:isAuth ? "block":"none"}} onClick={handleLogout } >Logout</MenuItem>
               </MenuList>
             </Menu>
           </Flex>

@@ -23,7 +23,9 @@ export const Singlepage = () => {
   
 
     useEffect(()=>{
-       axios.get(`http://localhost:8080/products/${id}`)
+       axios.get(`https://deployeement-server.onrender.com/products/${id}`)
+
+       
        .then((res)=> setdata(res.data))
     },[])
 
@@ -144,7 +146,8 @@ const DIV=styled.div`
     #container{
     display: flex;
     margin: auto;
-    padding: 20px;
+    padding: 5%;
+   
     }
     #img{
         width: 35%;
@@ -184,10 +187,10 @@ const DIV=styled.div`
         font-weight:700
     }
     #button{
-    margin-top: 10px;
+    margin-top: 5%;
     background-color : #c98913;
-    height: 50px;
-    width: 300px;
+    height: 15%;
+    width: 50%;
     color: white;
     border-radius: 15px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
@@ -201,4 +204,132 @@ const DIV=styled.div`
     font-weight: 600;
     
  }
+ @media (max-width: 768px) {
+  #container{
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    }
+    #img{
+        width: 35%;
+    }
+    #img img{
+    width: 100%;
+    border: 1px solid gray;
+
+    }
+    #details{
+    width: 60%;
+    padding: 5px;
+    /* border: 1px solid gray; */
+    }
+    #details h4{
+        font-size:22px
+    }
+    #details h5{
+        font-size:22px
+    }
+    #details h6{
+        font-size:22px
+    }
+    #details p{
+        font-size: 18px;
+    }
+    #pardetail{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    #pardetail h1{
+        font-weight:700;
+        
+    }
+    #pardetail Badge{
+        font-weight:700
+    }
+    #button{
+    margin-top: 5%;
+    background-color : #c98913;
+    height: 15%;
+    width: 50%;
+    color: white;
+    font-size: small;
+    border-radius: 15px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ #button:hover{
+    background-color: #f09f27;
+    color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ span{
+    font-weight: 600;
+    
+ }
+}
+@media (max-width: 550px) {
+  #container{
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    }
+    #img{
+        width: 35%;
+    }
+    #img img{
+    width: 100%;
+    border: 1px solid gray;
+
+    }
+    #details{
+    width: 60%;
+    padding: 5px;
+    /* border: 1px solid gray; */
+    }
+    #details h4{
+        font-size:18px
+    }
+    #details h5{
+        font-size:18px
+    }
+    #details h6{
+        font-size:18px
+    }
+    #details p{
+        font-size: 16px;
+    }
+    #pardetail{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+    }
+    #pardetail h1{
+        font-weight:700;
+        
+    }
+    #pardetail Badge{
+        font-weight:700
+    }
+    #button{
+    margin-top: 5%;
+    background-color : #c98913;
+    height: 15%;
+    width: 50%;
+    color: white;
+    font-size: xx-small;
+    border-radius: 15px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ #button:hover{
+    background-color: #f09f27;
+    color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
+ span{
+    font-weight: 600;
+    
+ }
+}
 `
