@@ -11,7 +11,6 @@ const initialState={
   data:[],
   description:"",
   category:"",
-  
   }
 
 
