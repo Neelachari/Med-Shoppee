@@ -8,6 +8,13 @@ Its a web application that provides a platform to buy Pharmacy.It a user friendl
 
 
 [website Url--](https://mid-shoppee.netlify.app/)
+
+## Login credentials
+```bash
+email: user@123 
+password: user@123
+```
+
 ## Tech Stack
 **Client:** Html ,Css
 **Client Server Api:** Local Storage,Json Server.
@@ -33,11 +40,7 @@ Start the server
 ```bash
   npm run start
 ```
-## Login credentials
-```bash
-email: user@123 
-password: user@123
-```
+
 
 ## Support
 For support, email -neelachari34@gmail.com 
