@@ -1,4 +1,4 @@
-# Mid-Shoppee
+# Med-Shoppee
 
 Cloning of TATA 1mg
 Its a web application that provides a platform to buy Pharmacy.It a user friendly E Commerce Website.
