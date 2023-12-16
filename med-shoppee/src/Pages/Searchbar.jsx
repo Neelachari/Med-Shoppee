@@ -12,13 +12,15 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
+import { useSelector } from 'react-redux';
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const toast = useToast();
-  const {data,setdata}=useContext(AuthContext)
+  // const {data,setdata}=useContext(AuthContext)
+  const products=useSelector((store)=> store.productReducer.products)
 
-console.log(data)
+ console.log(products)
   
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -27,10 +29,13 @@ console.log(data)
     toast({
       title: "Search Resullts",
       status: "success",
-      duration: 2000,
+      duration: 4000,
       isClosable: true,
+      width: '800px',
+      maxWidth: '100%',
+      position: 'top',
       render:()=>(
-        <Box color="white" bg="orange"  p="20px" >{data.filter((e)=>setdata(e.data))}</Box>
+        <Box color="black" bg="white" borderRadius={"15px"}  p="20px"  > <p>{products.name}</p> </Box>
     )
     
     });
@@ -44,6 +49,12 @@ console.log(data)
       status: "success",
       duration: 2000,
       isClosable: true,
+      width: '800px',
+      maxWidth: '100%',
+      position: 'top',
+      render:()=>(
+        <Box color="black" bg="white" borderRadius={"15px"}  p="20px"  > <p>Search result not found.</p> </Box>
+    )
     });
   };
 
@@ -78,8 +89,8 @@ console.log(data)
       </InputGroup>
     </Box>
     <Box>
-      {data?<Box height={'20vh'}>
-           <h1>{data.name}</h1>
+      {products?<Box height={'8vh'}>
+           <h1>{products.name}</h1>
       </Box>:""}
     </Box>
     </Flex>

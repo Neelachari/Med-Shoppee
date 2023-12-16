@@ -53,8 +53,8 @@ useEffect(()=>{
        </div>
        <div className='homePage'>
        {/* <h1 style={{textAlign:"left" , marginLeft:"10px", fontWeight:"600"}}>Total Products : {products.length} </h1> */}
-       {isLoading? <Loading/>:"" }
-       {products? <ProductList/> :<Loading/>}
+        {isLoading ?  <Loading />: ""  }
+       {products?<ProductList />  : ""}
         <div id="page">
         <button disabled={page==1} onClick={()=> setPage(page -1) }>Prev</button>
         <h4>{page}</h4>
@@ -65,6 +65,9 @@ useEffect(()=>{
     </DIV>
   )
 }
+
+
+
 
 
 const DIV=styled.div`
