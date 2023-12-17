@@ -27,7 +27,6 @@ let obj={
     gender:searchParms.getAll('gender'),
     _sort:searchParms.get("order") && "price",
     _order:searchParms.get("order"),
-
     _page:page
    
 
@@ -44,6 +43,8 @@ useEffect(()=>{
   disptch(getProducts(obj))
   
   },[page])
+
+  
 
 
   return (
