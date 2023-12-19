@@ -12,6 +12,7 @@ import {
   Flex,
   Heading,
   border,
+  Link,
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from 'react-redux';
@@ -109,15 +110,20 @@ const SearchBar = () => {
         />
       </InputGroup>
     </Box>
-     {filter.length>0? <div className="scroll_container" style={{ position: "absolute", top: "65px", width: "64vw", background: "white", maxHeight: "400px", zIndex: "100", overflowY: "scroll", padding: "3px 9px 3px 14px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", left:"11%" }} >
+     {filter.length>0? <div className="scroll_container" style={{ position: "absolute", top: "65px", width: "63vw", background: "white", maxHeight: "400px", zIndex: "100", overflowY: "scroll", padding: "3px 9px 3px 14px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", left:"12%" }} >
       {filter?.map((el)=>{
-            return  <div style={{ display: "flex", justifyContent: "left", alignItems: "center", color: "black" }}>
+            return   <Link  style={{ textDecoration: "none" }}
+            href={`/Singlepage/${el.id}`} 
+          ><div style={{ display: "flex", justifyContent: "left", alignItems: "center", color: "black" }}> 
             <img width="30px" height="50px" src={el.image} alt="" />
-            <p style={{ fontWeight: "600", padding: "8px 4px 8px 4px", margin: "6px", borderRadius: "8px", fontSize:"smaller" }} key={Math.random()}>{el.name}</p>
-            <p style={{ fontWeight: "600", padding: "8px 4px 8px 4px", margin: "6px", borderRadius: "8px", color:'green',  fontSize:"smaller" }} key={Math.random()} >₹.{el.price} /- </p>
-          </div>
+            <p style={{ fontWeight: "bold", padding: "8px 4px 8px 4px", margin: "6px", borderRadius: "8px", fontSize:"smaller" }} key={Math.random()}>{el.name}</p>
+            <p style={{ fontWeight: "200", padding: "8px 4px 8px 4px", margin: "6px", borderRadius: "8px", color:'green',  fontSize:"smaller" }} key={Math.random()} >₹.{el.price} /- </p> 
+          </div></Link>
       })}
     </div> : null }
+    </Box>
+    <Box mb={"20px"}>
+
     </Box>
    </>
   );
