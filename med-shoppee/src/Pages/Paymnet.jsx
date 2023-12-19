@@ -210,7 +210,7 @@ function PaymentPage({img, Price, Price1, Brand, city}) {
       <br />
       <br />
       <br />
-      <Box maxWidth="500px" mx="auto" p={4} border="3px solid teal" zIndex={5}>
+      <Box maxWidth="500px" mx="auto" p={4} border="3px solid orange" zIndex={5}>
         <Text fontSize="18px" fontWeight="bold" color="green">
           Amount: ₹.{TotalPrice +99}
         </Text>
@@ -319,17 +319,17 @@ function PaymentPage({img, Price, Price1, Brand, city}) {
               </Text>
             </ModalBody>
             <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
+              <Button  mr={3} onClick={onClose}>
                 Close
               </Button>
-              <Button colorScheme="blue" onClick={handlePayNowClick}>
+              <Button colorScheme="orange" onClick={handlePayNowClick}>
                 Pay Now
               </Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
 
-        <Button colorScheme="blue" mt={4} w="100%" onClick={onOpen}>
+        <Button colorScheme="orange" mt={4} w="100%" onClick={onOpen}>
           Pay Now
         </Button>
       </Box>
