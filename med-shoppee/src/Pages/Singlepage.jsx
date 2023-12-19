@@ -30,36 +30,46 @@ export const Singlepage = () => {
     },[])
 
 
-    const handleAddtoCart=()=>{
-      let flag=false
-      Data.forEach((el)=>{
-        if(el.id==data.id){
-          flag=true
-          
-          
+    const handleAddtoCart = () => {
+      if (isAuth == true) {
+        console.log(isAuth);
+        let flag = false;
+        Data.forEach((el) => {
+          if (el.id === data.id) {
+            flag = true;
+          }
+        });
+        if (flag) {
+          toast({
+            title: `🛒 Product Already in the Cart`,
+            position: "top",
+            status: "warning",
+            isClosable: true,
+          });
+        } else {
+          toast({
+            title: `✅ Product Added to Cart`,
+            position: "top",
+            status: "success",
+            isClosable: true,
+          });
+          dispatch(addToCart(data));
+          navigate("/BsCartPlus");
         }
-      })
-      if(flag==true){
+    
+       
+      } else {
         toast({
-          title: `🛒 Product Already in the Cart`,
+          title: `🚫 User not authenticated. Please log in.`,
           position: "top",
-          status:"warning",
+          status: "error",
           isClosable: true,
-        })
+        });
+        navigate("/Login");
+        // Redirect to the login page or handle authentication accordingly
+        // Example: navigate("/login");
       }
-      else{
-        toast({
-          title: `✅ Product Added to Cart`,
-          position: "top",
-          status:"success",
-          isClosable: true,
-        })
-        dispatch(addToCart(data))
-        navigate("/BsCartPlus")
-      }
-      
-      console.log(data)
-    }
+    };
 
   return (
     <DIV>

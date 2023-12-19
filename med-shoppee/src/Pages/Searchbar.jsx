@@ -93,6 +93,7 @@ const SearchBar = () => {
         <Input
           type="text"
           placeholder='Search for Medicines and Health Products'
+          focusBorderColor='orange.300'
           value={searchTerm}
           bg={'gray.100'}
           onChange={handleSearch}
