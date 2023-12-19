@@ -33,7 +33,7 @@ export default function Navbar2() {
         color={useColorModeValue('gray.600', 'white')}
         minH={'0px'}
         boder={"1px solid red"}
-        mt={'0px'}
+        mt={'-10px'}
         py={{ base: 0 }}
         px={{ base: 4 }}
         borderBottom={1}

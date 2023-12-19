@@ -27,6 +27,18 @@ export const getProducts = (obj)=>(dispatch)=>{
     })
 }
 
+export const allProducts = (obj)=>(dispatch)=>{
+    dispatch({type:PRODUCT_REQUEST})
+    axios.get(`https://deployeement-server.onrender.com/products`,obj)
+    .then((res)=>{
+        dispatch({type:GET_PRODUCT_SUCCESS, payload :res.data})
+    })
+    .catch((err)=>{
+        dispatch({type:PRODUCT_FAILURE})
+    })
+}
+
+
 export const addToCart=(cartData)=>(dispatch)=>{
     console.log(cartData)
     dispatch({type:ADD_PRODUCT_SUCCESS, payload:cartData})
