@@ -102,7 +102,7 @@ export default function Navbar() {
       py={1} rounded={'md'}>
             
                 <NavLink className='NaveText' to={'/'} >MEDICINES</NavLink>
-                <NavLink className='NaveText' to={'/products'} >PRODUCTS</NavLink>
+                <NavLink className='NaveText' to={'/products'} ><span style={{color:"red", marginRight:"-5px"}}>*</span> PRODUCTS</NavLink>
                 <NavLink className='NaveText' to={'/'} >LAB TESTS</NavLink>
                 <NavLink className='NaveText' to={'/'} >CONSULT DOCTORS</NavLink>
                 <NavLink className='NaveText' to={'/'} >AYURVEDA</NavLink>
