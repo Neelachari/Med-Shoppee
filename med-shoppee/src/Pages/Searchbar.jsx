@@ -113,7 +113,7 @@ const SearchBar = () => {
         />
       </InputGroup>
     </Box>
-    {isLoading?<div className="scroll_container" style={{ position: "absolute", top: "65px", width: "63vw", background: "white", maxHeight: "80px", zIndex: "100", overflowY: "scroll", padding: "3px 9px 3px 14px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", left:"12%" }} ><Spinner color='red.500' /></div>:null}
+    {/* {isLoading?<div className="scroll_container" style={{ position: "absolute", top: "65px", width: "63vw", background: "white", maxHeight: "80px", zIndex: "100", overflowY: "scroll", padding: "3px 9px 3px 14px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", left:"12%" }} ><Spinner color='red.500' /></div>:null} */}
      {filter.length>0? <div className="scroll_container" style={{ position: "absolute", top: "65px", width: "63vw", background: "white", maxHeight: "400px", zIndex: "100", overflowY: "scroll", padding: "3px 9px 3px 14px", boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px", left:"12%" }} >
       {filter?.map((el)=>{
             return   <Link  style={{ textDecoration: "none" }}
