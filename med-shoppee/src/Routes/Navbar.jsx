@@ -26,6 +26,8 @@ import {useContext} from "react"
 import {AuthContext} from "../Context/AuthContextProvider"
 import { Navigate } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
+import { useSelector } from 'react-redux'
+
 // import { useToast } from '@chakra-ui/react'
 // interface Props {
 //   children: React.ReactNode
@@ -62,7 +64,7 @@ const Navlink = (props) => {
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const {isAuth,setIsAuth}=useContext(AuthContext)
-
+  const isLoading=useSelector((store)=> store.productReducer.isLoading)
  console.log(isAuth)
 
  const toast = useToast();
@@ -84,6 +86,7 @@ export default function Navbar() {
 
   return (
     <>
+   {isLoading ?<Box w={"100%"} h={"18px"} background={"red"}  fontSize={"small"} color={"yellow"} font-family={"Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif"}>Please wait, the backend server is currently loading...</Box>:""}
       <Box bg={useColorModeValue('white.100', 'white.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
@@ -128,7 +131,9 @@ export default function Navbar() {
                   src={ `${isAuth ? "https://img.freepik.com/free-icon/man_318-474853.jpg":'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQJDEnnVNYD3wOk0PIywPT-2m4UETU7lhOSFBO2HywWPvrH7-g45Eh4Rq9F9WxZTYONKU&usqp=CAU'}`
                     
                   }
+                
                 />
+                
               </MenuButton>
               <MenuList>
                 <Link to="/SignUp">

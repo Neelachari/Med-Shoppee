@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import SimpleSlider from './SlickCarsol'
 import SearchBar from "./Searchbar"
@@ -8,18 +9,13 @@ import Slick4 from "./slick4"
 import Slick5 from "./Slick5"
 import home from "./home.css"
 import Footer from './Footer'
+import { Box, Spacer } from '@chakra-ui/react'
 import Navbar2 from '../Routes/Navbar2'
 
-
-
-
-export default function Home() {
- 
-
-
-
+export const Home1 = () => {
   return (
-      <div>
+    <div>
+         {/* <div> */}
       <SearchBar/>
       <Navbar2/>
       <SimpleSlider/>
@@ -28,7 +24,7 @@ export default function Home() {
       <Slick3/>
       <Slick4/>
       <Slick5/>
+    {/* </div> */}
     </div>
-    
   )
 }

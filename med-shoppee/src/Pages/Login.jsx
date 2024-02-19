@@ -7,8 +7,8 @@ import { AuthContext } from '../Context/AuthContextProvider';
 // import { useToast } from '@chakra-ui/react'
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: 'user@123',
+    password: 'user@123',
   });
 
 const {isAuth,setIsAuth}=useContext(AuthContext)
