@@ -108,19 +108,19 @@ export const SignUp = () => {
         <form onSubmit={handleSubmit}>
           <FormControl id="name" mb="4">
             <FormLabel>Name</FormLabel>
-            <Input type="text" placeholder="Enter your Name" name="name" value={formData.name} onChange={handleInputChange} />
+            <Input type="text" placeholder="Enter your Name" name="name" value={formData.name} onChange={handleInputChange} required/>
           </FormControl>
           <FormControl id="email" mb="4">
             <FormLabel>Email address</FormLabel>
-            <Input type="email" placeholder="Enter Email ID" name="email" value={formData.email} onChange={handleInputChange} />
+            <Input type="email" placeholder="Enter Email ID" name="email" value={formData.email} onChange={handleInputChange} required/>
           </FormControl>
           <FormControl id="password" mb="4">
             <FormLabel>Password</FormLabel>
-            <Input type="password" placeholder="Enter Password" name="password" value={formData.password} onChange={handleInputChange} />
+            <Input type="password" placeholder="Enter Password" name="password" value={formData.password} onChange={handleInputChange} required/>
           </FormControl>
           <FormControl id="confirmPassword" mb="8">
             <FormLabel>Confirm Password</FormLabel>
-            <Input type="password" placeholder="Re-Enter the Password" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} />
+            <Input type="password" placeholder="Re-Enter the Password" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} required/>
           </FormControl>
           <Button colorScheme="orange" mb="4" w="100%" type="submit" >
             Sign Up
