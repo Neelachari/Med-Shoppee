@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes,Route} from "react-router-dom"
-import About from '../Pages/About'
-import Contact from '../Pages/Contact'
+// import About from '../Pages/About'
+// import Contact from '../Pages/Contact'
 import Home from '../Pages/Home'
 // import LocationSearch from '../Pages/Loaction'
 import Login from '../Pages/Login'
@@ -25,9 +25,9 @@ const AllRoutes = () => {
     return (
         <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
+        {/* <Route path="/about" element={<About/>}></Route> */}
         <Route path="/Login" element={<Login/>}></Route>
-        <Route path="/contact" element={<Contact/>}></Route>
+        {/* <Route path="/contact" element={<Contact/>}></Route> */}
         <Route path="/products" element={<Homepage/>}></Route>
         <Route path="/products/:id" element={<Products/>}></Route>
         <Route path="/Singlepage/:id" element={<Singlepage/>}></Route>
