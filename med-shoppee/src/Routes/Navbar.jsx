@@ -27,7 +27,7 @@ import {AuthContext} from "../Context/AuthContextProvider"
 import { Navigate } from "react-router-dom"
 import { ToastContainer, toast } from 'react-toastify';
 import { useSelector } from 'react-redux'
-
+import { Progress } from '@chakra-ui/react'
 // import { useToast } from '@chakra-ui/react'
 // interface Props {
 //   children: React.ReactNode
@@ -86,7 +86,7 @@ export default function Navbar() {
 
   return (
     <>
-   {isLoading ?<Box w={"100%"} h={"18px"} background={"red"}  fontSize={"small"} color={"yellow"} font-family={"Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif"}>Please wait, the backend server is currently loading...</Box>:""}
+   {isLoading ?<Progress size='xs' isIndeterminate colorScheme='orange' />:""}
       <Box bg={useColorModeValue('white.100', 'white.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
